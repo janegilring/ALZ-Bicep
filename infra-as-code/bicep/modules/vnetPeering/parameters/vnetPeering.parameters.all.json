@@ -3,13 +3,13 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "parDestinationVirtualNetworkId": {
-      "value": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/HUB_Networking_POC/providers/Microsoft.Network/virtualNetworks/alz-hub-eastus"
+      "value": "/subscriptions/2d88df96-b1fc-422d-a47d-eb9018284dc1/resourceGroups/hub-networking/providers/Microsoft.Network/virtualNetworks/con-hub-westeurope"
     },
     "parSourceVirtualNetworkName": {
       "value": "vnet-spoke"
     },
     "parDestinationVirtualNetworkName": {
-      "value": "alz-hub-eastus"
+      "value": "con-hub-westeurope"
     },
     "parAllowVirtualNetworkAccess": {
       "value": true

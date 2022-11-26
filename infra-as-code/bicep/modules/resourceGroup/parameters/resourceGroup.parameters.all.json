@@ -3,14 +3,14 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "parLocation": {
-            "value": "eastus"
+            "value": "westeurope"
         },
         "parResourceGroupName": {
-            "value": "alz-rg"
+            "value": "con-rg"
         },
         "parTags": {
             "value": {
-              "Environment": "POC"
+              "Environment": "demo"
             }
         },
         "parTelemetryOptOut": {

@@ -3,10 +3,10 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "parLocation": {
-            "value": "eastus"
+            "value": "westeurope"
         },
         "parPublicIpName": {
-            "value": "alz"
+            "value": "con"
         },
         "parPublicIpSku": {
             "value": {
@@ -27,7 +27,7 @@
         },
         "parTags": {
             "value": {
-                "Environment": "POC"
+                "Environment": "demo"
             }
         },
         "parTelemetryOptOut": {

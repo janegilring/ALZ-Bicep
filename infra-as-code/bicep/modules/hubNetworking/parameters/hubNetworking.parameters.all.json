@@ -9,7 +9,7 @@
       "value": "con"
     },
     "parHubNetworkName": {
-      "value": "alz-hub-westeurope"
+      "value": "con-hub-westeurope"
     },
     "parHubNetworkAddressPrefix": {
       "value": "10.20.0.0/16"
@@ -40,7 +40,7 @@
       "value": true
     },
     "parAzBastionName": {
-      "value": "alz-bastion"
+      "value": "con-bastion"
     },
     "parAzBastionSku": {
       "value": "Standard"
@@ -52,16 +52,16 @@
       "value": false
     },
     "parDdosPlanName": {
-      "value": "alz-ddos-plan"
+      "value": "con-ddos-plan"
     },
     "parAzFirewallEnabled": {
       "value": true
     },
     "parAzFirewallName": {
-      "value": "alz-azfw-westeurope"
+      "value": "con-azfw-westeurope"
     },
     "parAzFirewallPoliciesName": {
-      "value": "alz-azfwpolicy-westeurope"
+      "value": "con-azfwpolicy-westeurope"
     },
     "parAzFirewallTier": {
       "value": "Standard"
@@ -79,7 +79,7 @@
       "value": true
     },
     "parHubRouteTableName": {
-      "value": "alz-hub-routetable"
+      "value": "con-hub-routetable"
     },
     "parDisableBgpRoutePropagation": {
       "value": false
@@ -158,7 +158,7 @@
     },
     "parVpnGatewayConfig": {
       "value": {
-        "name": "alz-Vpn-Gateway",
+        "name": "con-Vpn-Gateway",
         "gatewayType": "Vpn",
         "sku": "VpnGw1",
         "vpnType": "RouteBased",
@@ -178,7 +178,7 @@
     },
     "parExpressRouteGatewayConfig": {
       "value": {
-        "name": "alz-ExpressRoute-Gateway",
+        "name": "con-ExpressRoute-Gateway",
         "gatewayType": "ExpressRoute",
         "sku": "Standard",
         "vpnType": "RouteBased",
