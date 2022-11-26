@@ -3,11 +3,11 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "parTargetManagementGroupId": {
-      "value": "alz-platform-connectivity"
+      "value": "con-platform-connectivity"
     },
     "parSubscriptionIds": {
       "value": [
-        "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+        "2d88df96-b1fc-422d-a47d-eb9018284dc1"
       ]
     },
     "parTelemetryOptOut": {
