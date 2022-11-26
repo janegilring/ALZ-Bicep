@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "parLogAnalyticsWorkspaceName": {
-      "value": "alz-log-analytics"
+      "value": "con-log-analytics"
     },
     "parLogAnalyticsWorkspaceLocation": {
       "value": "westeurope"
@@ -12,7 +12,7 @@
       "value": "PerGB2018"
     },
     "parLogAnalyticsWorkspaceLogRetentionInDays": {
-      "value": 5
+      "value": 30
     },
     "parLogAnalyticsWorkspaceSolutions": {
       "value": [
