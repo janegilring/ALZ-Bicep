@@ -6,10 +6,10 @@
         "value": "westeurope"
       },
       "parTopLevelManagementGroupPrefix": {
-        "value": "alz"
+        "value": "con"
       },
       "parPeeredVnetSubscriptionId": {
-        "value": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+        "value": "57e14e5c-cd9a-4a8d-9575-f39835f3048c"
       },
       "parPeeredVnetSubscriptionMgPlacement": {
         "value": "con-platform-connectivity"
@@ -36,7 +36,7 @@
         "value": "rtb-spoke-to-hub"
       },
       "parHubVirtualNetworkId": {
-        "value": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/alz-westeurope-hub-networking/providers/Microsoft.Network/virtualHubs/alz-vhub-westeurope"
+        "value": "/subscriptions/2d88df96-b1fc-422d-a47d-eb9018284dc1/resourceGroups/hub-networking/providers/Microsoft.Network/virtualNetworks/con-hub-westeurope"
       },
       "parAllowSpokeForwardedTraffic": {
         "value": false
@@ -46,7 +46,7 @@
       },
       "parTags": {
         "value": {
-          "Environment": "POC"
+          "Environment": "demo"
         }
       },
       "parTelemetryOptOut": {
