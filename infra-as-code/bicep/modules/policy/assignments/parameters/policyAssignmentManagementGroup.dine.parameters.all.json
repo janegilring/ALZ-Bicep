@@ -12,12 +12,12 @@
             "value": "Deploy Microsoft Defender for Cloud configuration and Security Contacts"
         },
         "parPolicyAssignmentDefinitionId": {
-            "value": "/providers/Microsoft.Management/managementGroups/alz/providers/Microsoft.Authorization/policySetDefinitions/Deploy-MDFC-Config"
+            "value": "/providers/Microsoft.Management/managementGroups/con/providers/Microsoft.Authorization/policySetDefinitions/Deploy-MDFC-Config"
         },
         "parPolicyAssignmentParameters": {
             "value": {
                 "emailSecurityContact": {
-                    "value": "security_contact@replace_me"
+                    "value": "janegilring@contoso.com"
                 },
                 "logAnalytics": {
                     "value": "alz-la"
@@ -77,7 +77,7 @@
         },
         "parPolicyAssignmentIdentityRoleAssignmentsAdditionalMgs": {
             "value": [
-                "alz-platform"
+                "con-platform"
             ]
         },
         "parPolicyAssignmentIdentityRoleAssignmentsSubs": {

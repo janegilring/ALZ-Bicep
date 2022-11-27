@@ -53,7 +53,7 @@
         },
         "parPolicyAssignmentIdentityRoleAssignmentsAdditionalMgs": {
             "value": [
-                "alz-platform"
+                "con-platform"
             ]
         },
         "parPolicyAssignmentIdentityRoleAssignmentsSubs": {
