@@ -20,10 +20,10 @@
                     "value": "janegilring@contoso.com"
                 },
                 "logAnalytics": {
-                    "value": "alz-la"
+                    "value": "con-log-analytics"
                 },
                 "ascExportResourceGroupName": {
-                    "value": "alz-asc-export"
+                    "value": "alz-logging"
                 },
                 "ascExportResourceGroupLocation": {
                     "value": "${parDefaultRegion}"

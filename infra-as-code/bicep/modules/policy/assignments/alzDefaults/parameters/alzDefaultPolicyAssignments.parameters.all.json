@@ -3,22 +3,22 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "parTopLevelManagementGroupPrefix": {
-            "value": "alz"
+            "value": "con"
         },
         "parLogAnalyticsWorkSpaceAndAutomationAccountLocation": {
-            "value": "eastus"
+            "value": "westeurope"
         },
         "parLogAnalyticsWorkspaceResourceId": {
-            "value": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/alz-logging/providers/Microsoft.OperationalInsights/workspaces/alz-log-analytics"
+            "value": "/subscriptions/1d6ec85d-73c1-44ac-afa4-d2586c91abb6/resourcegroups/alz-logging/providers/microsoft.operationalinsights/workspaces/con-log-analytics"
         },
         "parLogAnalyticsWorkspaceLogRetentionInDays": {
-            "value": "365"
+            "value": "30"
         },
         "parAutomationAccountName": {
-            "value": "alz-automation-account"
+            "value": "con-automation-account"
         },
         "parMsDefenderForCloudEmailSecurityContact": {
-            "value": "security_contact@replace_me.com"
+            "value": "janegilring@contoso.com"
         },
         "parDdosProtectionPlanId": {
             "value": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/Hub_Networking_POC/providers/Microsoft.Network/ddosProtectionPlans/alz-ddos-plan"
