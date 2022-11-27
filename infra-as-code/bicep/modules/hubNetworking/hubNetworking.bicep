@@ -252,12 +252,6 @@ var varGwConfig = [
 // Customer Usage Attribution Id
 var varCuaid = '2686e846-5fdc-4d4f-b533-16dcb09d6e6c'
 
-resource resDdosProtectionPlan 'Microsoft.Network/ddosProtectionPlans@2021-08-01' = if (parDdosEnabled) {
-  name: parDdosPlanName
-  location: parLocation
-  tags: parTags
-}
-
 //DDos Protection plan will only be enabled if parDdosEnabled is true.
 resource resHubVnet 'Microsoft.Network/virtualNetworks@2021-08-01' = {
   dependsOn: [
@@ -628,6 +622,5 @@ output outAzFirewallName string = parAzFirewallEnabled ? parAzFirewallName : ''
 
 output outPrivateDnsZones array = (parPrivateDnsZonesEnabled ? modPrivateDnsZones.outputs.outPrivateDnsZones : [])
 
-output outDdosPlanResourceId string = resDdosProtectionPlan.id
 output outHubVirtualNetworkName string = resHubVnet.name
 output outHubVirtualNetworkId string = resHubVnet.id
