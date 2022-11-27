@@ -48,12 +48,6 @@
     "parAzBastionNsgName": {
       "value": "nsg-AzureBastionSubnet"
     },
-    "parDdosEnabled": {
-      "value": false
-    },
-    "parDdosPlanName": {
-      "value": "con-ddos-plan"
-    },
     "parAzFirewallEnabled": {
       "value": true
     },

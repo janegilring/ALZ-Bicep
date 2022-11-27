@@ -48,12 +48,6 @@ param parAzBastionSku string = 'Standard'
 @description('NSG Name for Azure Bastion Subnet NSG. Default: nsg-AzureBastionSubnet')
 param parAzBastionNsgName string = 'nsg-AzureBastionSubnet'
 
-@description('Switch to enable/disable DDoS Network Protection deployment. Default: true')
-param parDdosEnabled bool = true
-
-@description('DDoS Plan Name. Default: {parCompanyPrefix}-ddos-plan')
-param parDdosPlanName string = '${parCompanyPrefix}-ddos-plan'
-
 @description('Switch to enable/disable Azure Firewall deployment. Default: true')
 param parAzFirewallEnabled bool = true
 
