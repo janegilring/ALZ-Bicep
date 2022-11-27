@@ -3,13 +3,13 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "parLocation": {
-      "value": "eastus"
+      "value": "westeurope"
     },
     "parCompanyPrefix": {
-      "value": "alz"
+      "value": "con"
     },
     "parHubNetworkName": {
-      "value": "alz-hub-eastus"
+      "value": "con-hub-westeurope"
     },
     "parHubNetworkAddressPrefix": {
       "value": "10.20.0.0/16"
@@ -49,7 +49,7 @@
       "value": "nsg-AzureBastionSubnet"
     },
     "parDdosEnabled": {
-      "value": true
+      "value": false
     },
     "parDdosPlanName": {
       "value": "alz-ddos-plan"
@@ -58,10 +58,10 @@
       "value": true
     },
     "parAzFirewallName": {
-      "value": "alz-azfw-eastus"
+      "value": "con-azfw-westeurope"
     },
     "parAzFirewallPoliciesName": {
-      "value": "alz-azfwpolicy-eastus"
+      "value": "con-azfwpolicy-westeurope"
     },
     "parAzFirewallTier": {
       "value": "Standard"
@@ -79,7 +79,7 @@
       "value": true
     },
     "parHubRouteTableName": {
-      "value": "alz-hub-routetable"
+      "value": "con-hub-routetable"
     },
     "parDisableBgpRoutePropagation": {
       "value": false
@@ -89,10 +89,10 @@
     },
     "parPrivateDnsZones": {
       "value": [
-        "privatelink.xxxxxx.azmk8s.io", // Replace xxxxxx with target region (i.e. eastus)
-        "privatelink.xxxxxx.batch.azure.com", // Replace xxxxxx with target region (i.e. eastus)
-        "privatelink.xxxxxx.kusto.windows.net", // Replace xxxxxx with target region (i.e. eastus)
-        "privatelink.xxxxxx.backup.windowsazure.com", // Replace xxxxxx with target region geo code (i.e. for eastus, the geo code is eus)
+        "privatelink.westeurope.azmk8s.io",
+        "privatelink.westeurope.batch.azure.com",
+        "privatelink.westeurope.kusto.windows.net",
+        "privatelink.westeurope.backup.windowsazure.com",
         "privatelink.adf.azure.com",
         "privatelink.afs.azure.net",
         "privatelink.agentsvc.azure-automation.net",
@@ -158,7 +158,7 @@
     },
     "parVpnGatewayConfig": {
       "value": {
-        "name": "alz-Vpn-Gateway",
+        "name": "con-Vpn-Gateway",
         "gatewayType": "Vpn",
         "sku": "VpnGw1",
         "vpnType": "RouteBased",
@@ -178,7 +178,7 @@
     },
     "parExpressRouteGatewayConfig": {
       "value": {
-        "name": "alz-ExpressRoute-Gateway",
+        "name": "con-ExpressRoute-Gateway",
         "gatewayType": "ExpressRoute",
         "sku": "Standard",
         "vpnType": "RouteBased",
@@ -198,7 +198,7 @@
     },
     "parTags": {
       "value": {
-        "Environment": "POC"
+        "Environment": "demo"
       }
     },
     "parTelemetryOptOut": {
