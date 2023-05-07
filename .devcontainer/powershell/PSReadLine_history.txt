@@ -1,0 +1,1886 @@
+cd /workspaces/ALZ-Bicep
+ls
+git status
+$PSVersionTable
+Connect-AzAccount -UseDeviceAuthentication
+az login --use-device
+Set-AzContext 87b8def0-f5cf-402e-a8db-10e0ee958565
+az account set -s "87b8def0-f5cf-402e-a8db-10e0ee958565"
+az account show
+az vm list-usage --location northeurope --output table
+az provider register --namespace Microsoft.HybridCompute --wait`
+az provider register --namespace Microsoft.GuestConfiguration --wait`
+az provider register --namespace Microsoft.Kubernetes --wait`
+az provider register --namespace Microsoft.KubernetesConfiguration --wait`
+az provider register --namespace Microsoft.ExtendedLocation --wait`
+az provider register --namespace Microsoft.AzureArcData --wait`
+az provider register --namespace Microsoft.OperationsManagement --wait`
+az provider register --namespace Microsoft.AzureStackHCI --wait`
+az provider register --namespace Microsoft.ResourceConnector --wait
+$spn = New-AzADServicePrincipal -DisplayName "HCIBoxSPN" -Role "Owner" -Scope "/subscriptions/$($account.Context.Subscription.Id)"
+$account = Get-AzContext
+$account.Context.Subscription.Id
+$account
+@
+pwd
+ls
+cd ..
+ls
+git clone https://github.com/microsoft/azure_arc.git
+pwd
+cd /workspaces/azure_arc/
+$account
+az group create --name "hcibox-demo-rg"  --location "northeurope"
+cd /workspaces/azure_arc/azure_jumpstart_hcibox/bicep
+az deployment group create -g "hcibox-demo-rg" -f "main.bicep" -p "main.parameters.json"
+az group delete -n hcibox-demo-rg-ArcServers
+az group delete -n hcibox-demo-rg
+az group create --name "hcibox-demo-rg"  --location "northeurope"
+cd /workspaces/azure_arc/azure_jumpstart_hcibox/bicep
+az deployment group create -g "hcibox-demo-rg" -f "main.bicep" -p "main.parameters.json"
+az group delete -n hcibox-demo-rg-ArcServers
+az group delete -n hcibox-demo-rg
+pwd
+az group create --name "hcibox-demo-rg"  --location "northeurope"
+cd /workspaces/azure_arc/azure_jumpstart_hcibox/bicep
+az deployment group create -g "hcibox-demo-rg" -f "main.bicep" -p "main.parameters.json"
+az account show
+az group delete -n hcibox-demo-rg-ArcServers
+az group delete -n hcibox-demo-rg
+az group create --name "hcibox-demo-rg"  --location "northeurope"
+cd /workspaces/azure_arc/azure_jumpstart_hcibox/bicep
+az deployment group create -g "hcibox-demo-rg" -f "main.bicep" -p "main.parameters.json"
+gmo -list
+Get-AzContext
+ipmo Az.Accounts
+Get-AzContext
+Install-Module Az.Accounts
+Get-AzContext
+Get-AksHciCluster
+Install-Module -Name AksHci
+Get-AksHciCluster
+Import-Module AksHci
+Get-AksHciCluster
+find-module az.accounts
+gmo -list
+az extension add --yes --source "https://aka.ms/logicapp-latest-py2.py3-none-any.whl"
+az group create --name logic-apps-rg--subscription demo --location eastus
+az group create --name logic-apps-rg --subscription demo --location eastus
+az storage account create -n 20221226hybriddemo -g logic-apps-rg -l eastus --sku Standard_LRS
+az logicapp create --name 20221226hybriddemo --resource-group logic-apps-rg  --subscription demo --storage-account 20221226hybriddemo --custom-location hcibox-rb-cl
+az vm list-usage --location northeurope --output table
+az provider register --namespace Microsoft.HybridCompute --wait`
+az provider register --namespace Microsoft.GuestConfiguration --wait`
+az provider register --namespace Microsoft.Kubernetes --wait`
+az provider register --namespace Microsoft.KubernetesConfiguration --wait`
+az provider register --namespace Microsoft.ExtendedLocation --wait`
+az provider register --namespace Microsoft.AzureArcData --wait`
+az provider register --namespace Microsoft.OperationsManagement --wait
+$account = Get-AzContext
+$spn = New-AzADServicePrincipal -DisplayName "ArcBoxSPN" -Role "Owner" -Scope "/subscriptions/$($account.Context.Subscription.Id)"
+$spn
+$account
+$account | fl
+ssh-keygen -t rsa -b 4096
+cat /home/vscode/.ssh/id_rsa_arcbox.pub
+az group create --name "arcbox-demo-rg"  --location "northeurope"
+cd /workspaces/azure_arc/azure_jumpstart_arcbox/bicep
+pwd
+az deployment group create -g "arcbox-demo-rg" -f "main.bicep" -p "main.parameters.json"
+az group create
+az group create --help
+az deployment group create --help
+az group create --name "arcbox-demo-rg"  --location "northeurope"
+cd /workspaces/azure_arc/azure_jumpstart_arcbox/bicep
+az deployment group create -g "arcbox-demo-rg" -f "main.bicep" -p "main.parameters.json"
+irm ifconfig.me
+iwr ifconfig.me
+ssh arcdemo@20.166.78.24
+ssh arcdemo@20.166.78.24 -i /home/vscode/.ssh/id_rsa_arcbox
+az group create --name "arcbox-demo-rg"  --location "northeurope"
+az deployment group create -g "arcbox-demo-rg" -f "main.bicep" -p "main.parameters.json"
+az provider register --namespace Microsoft.App --wait
+az extension remove --name containerapp`
+az extension add --source https://download.microsoft.com/download/5/c/2/5c2ec3fc-bd2a-4615-a574-a1b7c8e22f40/containerapp-0.0.1-py2.py3-none-any.whl --yes`
+
+az group delete -n hcibox-demo-rg-ArcServers
+cd /workspaces/azure_arc/azure_jumpstart_hcibox/bicep
+git pull
+az group delete -n hcibox-demo-rg
+az group create --name "hcibox-demo-rg"  --location "eastus"
+cd /workspaces/azure_arc/azure_jumpstart_hcibox/bicep
+az deployment group create -g "hcibox-demo-rg" -f "main.bicep" -p "main.parameters.json"
+cls
+az deployment group create -g "hcibox-demo-rg" -f "main.bicep" -p "main.parameters.json"
+cd /workspaces/azure_arc/azure_jumpstart_arcbox/bicep
+az group create --name "arcbox-demo-rg"  --location "northeurope"
+az deployment group create -g "arcbox-demo-rg" -f "main.bicep" -p "main.parameters.json"
+az extension add --name ssh
+Get-AzContext
+(Get-AzContext).Subscription.Id
+$subscriptionId = (Get-AzContext).Subscription.Id`
+$serverName = "Arcbox-Ubuntu-02"`
+$RGname = "arcbox-demo-rg"`
+az rest --method put --uri https://management.azure.com/subscriptions/$subscriptionId/resourceGroups/$RGname/providers/Microsoft.HybridCompute/machines/$serverName/providers/Microsoft.HybridConnectivity/endpoints/default?api-version=2021-10-06-preview --body '{\"properties\": {\"type\": \"default\"}}'`
+`
+
+az rest --method put --uri "https://management.azure.com/subscriptions/$subscriptionId/resourceGroups/$RGname/providers/Microsoft.HybridCompute/machines/$serverName/providers/Microsoft.HybridConnectivity/endpoints/default?api-version=2021-10-06-preview" --body '{\"properties\": {\"type\": \"default\"}}'
+az rest --method put --uri "https://management.azure.com/subscriptions/$subscriptionId/resourceGroups/$RGname/providers/Microsoft.HybridCompute/machines/$serverName/providers/Microsoft.HybridConnectivity/endpoints/default?api-version=2021-10-06-preview" --body '{\\"properties\\": {\\"type\\": \\"default\\"}}'
+az rest --method put --uri "https://management.azure.com/subscriptions/$subscriptionId/resourceGroups/$RGname/providers/Microsoft.HybridCompute/machines/$serverName/providers/Microsoft.HybridConnectivity/endpoints/default?api-version=2021-10-06-preview" --% --body '{\"properties\": {\"type\": \"default\"}}'
+az rest --method put --uri "https://management.azure.com/subscriptions/$subscriptionId/resourceGroups/$RGname/providers/Microsoft.HybridCompute/machines/$serverName/providers/Microsoft.HybridConnectivity/endpoints/default?api-version=2021-10-06-preview" --body --% '{\"properties\": {\"type\": \"default\"}}'
+az ssh arc --resource-group $RGname --name $serverName
+az ssh arc --resource-group $RGname --name $serverName --local-user arcdemo
+$serverName = "ArcBox-Win2K22"`
+$RGname = "arcbox-demo-rg"
+az rest --method put --uri "https://management.azure.com/subscriptions/$subscriptionId/resourceGroups/$RGname/providers/Microsoft.HybridCompute/machines/$serverName/providers/Microsoft.HybridConnectivity/endpoints/default?api-version=2021-10-06-preview" --body '{\"properties\": {\"type\": \"default\"}}'
+$subscriptionId
+$RGname = "arcbox-demo2-rg"`
+az group create --name $RGname --location "northeurope"
+cd /workspaces/azure_arc/azure_jumpstart_arcbox/bicep
+git pull
+pwd
+az deployment group create -g $RGname -f "main.bicep" -p "main.parameters.json"
+cd /workspaces/azure_arc/azure_jumpstart_arcbox/bicep
+az deployment group create -g $RGname -f "main.bicep" -p "main.parameters.json"
+Install-Module -Name PSRule -Scope CurrentUser
+bicep --version
+Open-EditorFile /workspaces/msftdemo/azure/infrastructure_as_code/bicep/basic-example/main.bicep
+New-AzResourceGroup -Name bicep-demo -Location westeurope
+pwd
+cd ..
+git clone git@ssh.dev.azure.com:v3/janegilringmsft/infrastructure-as-code/bicep
+cat /home/vscode/.ssh/id_rsa_arcbox.pub
+ls /home/vscode/.ssh
+git clone git@ssh.dev.azure.com:v3/janegilringmsft/infrastructure-as-code/bicep
+ls
+git clone git@ssh.dev.azure.com:v3/janegilringmsft/infrastructure-as-code/bicep
+git clone https://janegilringmsft@dev.azure.com/janegilringmsft/infrastructure-as-code/_git/bicep
+git clone git@ssh.dev.azure.com:v3/janegilringmsft/infrastructure-as-code/bicep
+ssh-keygen -t rsa -b 4096
+cat 
+cat /home/vscode/.ssh/id_rsa.pub
+git clone git@ssh.dev.azure.com:v3/janegilringmsft/infrastructure-as-code/bicep
+ls
+Rename-Item ./bicep/ -NewName janegilringmsft_bicep
+New-AzSubscriptionDeployment -Name -TemplateParameterFile /workspaces/janegilringmsft_bicep/infra-as-code/bicep/resourceGroup.bicep
+New-AzSubscriptionDeployment -Name resourceGroup -TemplateParameterFile /workspaces/janegilringmsft_bicep/infra-as-code/bicep/resourceGroup.bicep
+New-AzSubscriptionDeployment -Name resourceGroup_demo -TemplateFile /workspaces/janegilringmsft_bicep/infra-as-code/bicep/resourceGroup.bicep
+New-AzSubscriptionDeployment -Name resourceGroup_demo -TemplateFile /workspaces/janegilringmsft_bicep/infra-as-code/bicep/resourceGroup.bicep -Location westeurope
+('biceppipelinedemo2023').Length
+Write-Host "Running deployment from $($ENV:COMPUTERNAME)"
+dir env:
+Write-Host "Running deployment from $(hostname)"
+Write-Host "Running deployment from machine $(hostname) and public IP $(irm ifconfig.me)"
+irm ifconfig.me
+Invoke-WebRequest ifconfig.me
+Invoke-WebRequest ifconfig.me/ip
+irm ifconfig.me/ip
+Write-Host "Running deployment from machine $(hostname) and public IP $(irm ifconfig.me/ip)"
+$Text = "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://aka.ms/installazurecliwindows -OutFile c:\temp\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I c:\temp\AzureCLI.msi /quiet'; rm c:\temp\AzureCLI.msi"
+$Bytes = [System.Text.Encoding]::Unicode.GetBytes($Text)
+$EncodedText =[Convert]::ToBase64String($Bytes)
+$EncodedText
+gmo -list -name az
+gmo -list -name az.accounts
+Install-Module -Name 'PsRule' -Repository PSGallery -Scope CurrentUser -Force`
+Install-Module -Name 'PSRule.Rules.Azure' -Repository PSGallery -Scope CurrentUser -Force
+Invoke-PSRule -InputPath 'examples/' -Module 'PSRule.Rules.Azure' -As Summary
+Invoke-PSRule -InputPath '/workspaces/msftdemo/azure/infrastructure_as_code/testing/psrule/examples/' -Module 'PSRule.Rules.Azure' -As Summary
+az vmss extension list --resource-group pipeline-agents-rg  --vmss-name azure-devops-pool-01
+az account set -s "57e14e5c-cd9a-4a8d-9575-f39835f3048c"
+az vmss extension list --resource-group pipeline-agents-rg  --vmss-name azure-devops-pool-01
+az vmss extension delete --resource-group pipeline-agents-rg  --vmss-name azure-devops-pool-01 --name CustomScriptExtension
+az account set -s "87b8def0-f5cf-402e-a8db-10e0ee958565"
+cls
+Invoke-PSRule -InputPath '/workspaces/msftdemo/azure/infrastructure_as_code/testing/psrule/examples/' -Module 'PSRule.Rules.Azure' -As Summary
+Install-Module -Name 'PSRule.Rules.CAF' -Scope CurrentUser -Repository PSGallery -Force
+Invoke-PSRule -InputPath '/workspaces/msftdemo/azure/infrastructure_as_code/testing/psrule/examples/' -Module 'PSRule.Rules.CAF' -As Summary
+Invoke-PSRule -InputPath '/workspaces/msftdemo/azure/infrastructure_as_code/testing/psrule/examples/' -Module 'PSRule.Rules.CAF'
+Invoke-PSRule -InputPath '/workspaces/janegilringmsft_bicep/infra-as-code/bicep/demo02' -Module 'PSRule.Rules.CAF'
+Invoke-PSRule -InputPath '/workspaces/janegilringmsft_bicep/infra-as-code/bicep/demo02' -Module 'PSRule.Rules.Azure'
+Invoke-PSRule -InputPath '/workspaces/janegilringmsft_bicep/infra-as-code/bicep/demo01' -Module 'PSRule.Rules.Azure'
+Invoke-PSRule -InputPath '/workspaces/janegilringmsft_bicep/infra-as-code/bicep/demo02' -Module 'PSRule.Rules.Azure'
+gmo
+gmo -list -name psrule*
+find-module PSRule.Rules.Azure
+Invoke-PSRule -InputPath '/workspaces/janegilringmsft_bicep/infra-as-code/bicep/demo02' -Module 'PSRule.Rules.Azure'
+Invoke-PSRule -InputPath '/workspaces/janegilringmsft_bicep/infra-as-code/bicep/demo02' 
+Invoke-PSRule -InputPath '/workspaces/janegilringmsft_bicep/infra-as-code/bicep/demo02' -Module 'PSRule.Rules.Azure'
+Invoke-PSRule -InputPath '/workspaces/janegilringmsft_bicep/infra-as-code/bicep/demo02' -Module 'PSRule.Rules.Azure' -Verbose
+Assert-PSRule -Module 'PSRule.Rules.CAF' -Format File -InputPath '/workspaces/janegilringmsft_bicep/infra-as-code/bicep/demo02'
+Assert-PSRule -Module 'PSRule.Rules.CAF' -Format File -InputPath '/workspaces/janegilringmsft_bicep'
+pwd
+/workspaces/janegilringmsft_bicep
+cd /workspaces/janegilringmsft_bicep
+Assert-PSRule -Module 'PSRule.Rules.CAF' -Format File -InputPath '/workspaces/janegilringmsft_bicep'
+Invoke-PSRule -InputPath '/workspaces/janegilringmsft_bicep/infra-as-code/bicep/demo02' -Module 'PSRule.Rules.CAF'
+pwd
+cd ..
+pw
+pwd
+git clone git@github.com:Azure/PSRule.Rules.Azure-quickstart.git
+hostname
+git clone https://github.com/Azure/PSRule.Rules.Azure-quickstart.git
+pwd
+cd ./PSRule.Rules.Azure-quickstart/
+git remote add origin https://janegilringmsft@dev.azure.com/janegilringmsft/infrastructure-as-code/_git/PSRule.Rules.Azure-quickstart
+git remote remove origin
+git remote add origin https://janegilringmsft@dev.azure.com/janegilringmsft/infrastructure-as-code/_git/PSRule.Rules.Azure-quickstart
+git push -u origin --all
+git remote remove origin
+git remote add origin git@ssh.dev.azure.com:v3/janegilringmsft/infrastructure-as-code/PSRule.Rules.Azure-quickstart
+git push -u origin --all
+pwd
+# STEP 3: Test Azure Infrastructure as Code
+Assert-PSRule -Module 'PSRule.Rules.CAF' -Format File -InputPath '.'
+gmo
+gcm -mod psrule
+git config pull.ff only
+git pull
+git config pull.rebase false
+git pull
+gmo
+pwd
+cd ..
+ls
+git clone git@ssh.dev.azure.com:v3/janegilringmsft/infrastructure-as-code/tine-iac
+bicep --version
+Open-EditorFile /workspaces/msftdemo/azure/infrastructure_as_code/bicep/basic-example/main.bicep
+New-AzResourceGroup -Name tine-bicep-demo -Location westeurope
+Open-EditorFile /workspaces/msftdemo/azure/infrastructure_as_code/bicep/basic-example/main.bicep
+d�
+�
+8O�
+8O�@Open-EditorFile /workspaces/msftdemo/azure/infrastructure_as_code/bicep/basic-example/main.bicep�6�~��Ya��BRM�h�Wah�Wa�AOpen-EditorFile /workspaces/msftdemo/azure/infrastructure_as_code/bicep/basic-example/main.bicep�6�~��Ya8�Yd�8�l�� >Open-EditorFile /workspaces/msftdemo/azure/infrastructure_as_code/bicep/basic-example/main.bicep�6�~����`�
+�
+Y�c��AA/workspaces/msftdemo/azure/infrastructure_as_code/bicep/basic-example/main.bicep�6�~�qF�~�qF�~����`��?A/workspaces/msftdemo/azure/infrastructure_as_code/bicep/basic-example/main.bicep�6�~�qF�~�qF�~BRM�h�Wah�Wa�AA/workspaces/msftdemo/azure/infrastructure_as_code/bicep/basic-example/main.bicep�6�~�qF�~�qF�~��Ya�AA/workspaces/msftdemo/azure/infrastructure_as_code/bicep/basic-example/main.bicep�6�~�qF�~�qF�~-
+Y�c��AA/workspaces/msftdemo/azure/infrastructure_as_code/bicep/basic-example/main.bicep�6�~�qF�~�qF�~����`��?A/workspaces/msftdemo/azure/infrastructure_as_code/bicep/basic-example/main.bicep�6�~�qF�~�qF�~BRM�h�Wah�Wa�AA/workspaces/msftdemo/azure/infrastructure_as_code/bicep/basic-example/main.bicep�6�~�qF�~�qF�~��Ya�AA/workspaces/msftdemo/azure/infrastructure_as_code/bicep/basic-example/main.bicep�6�~�qF�~�qF�~-BVX����9�,�8�l���9�,~BRM�h�Wah�Wa�CVX����9�,�8�l���9�,~��Ya
+Y�c��AA/workspaces/msftdemo/azure/infrastructure_as_code/bicep/basic-example/main.bicep�6�~�qF�~�qF�~����`��?A/workspaces/msftdemo/azure/infrastructure_as_code/bicep/basic-example/main.bicep�6�~�qF�~�qF�~BRM�h�Wah�Wa�AA/workspaces/msftdemo/azure/infrastructure_as_code/bicep/basic-example/main.bicep�6�~�qF�~�qF�~��Ya�AA/workspaces/msftdemo/azure/infrastructure_as_code/bicep/basic-example/main.bicep�6�~�qF�~�qF�~-BVX����9�,�8�l���9�,~BRM�h�Wah�Wa�CVX����9�,�8�l���9�,~��YaBVX����9�,�8�l���9�,~BRM�h�Wah�Wa�CVX����9�,�8�l���9�,~��Ya�AVX����9�,�8�l���9�,~��JBVX����9�,�8�l���9�,~&��N}���N�AVX����9�,�8�l���9�,~��Ya���N�EVX����9�,�8�l���9�,~U�e0m38;2;35;77;112m���0mK0J38;2;33;199;168m������0m38;2;34;218;110m������0mK0J0;msftdemo0BVX����9�,�8�l���9�,~BRM�h�Wah�Wa�CVX����9�,�8�l���9�,~��Ya�AVX����9�,�8�l���9�,~��JBVX����9�,�8�l���9�,~&��N}���N�AVX����9�,�8�l���9�,~��Ya���N�EVX����9�,�8�l���9�,~U�e0m38;2;35;77;112m���0mK0J38;2;33;199;168m������0m38;2;34;218;110m������0mK0J0;msftdemo0BVX����9�,�8�l���9�,~BRM�h�Wah�Wa�CVX����9�,�8�l���9�,~��Yah�Wah�Wa�CVX����9�,�8�l���9�,~
+Y�c��AA/workspaces/msftdemo/azure/infrastructure_as_code/bicep/basic-example/main.bicep�6�~�qF�~�qF�~����`��?A/workspaces/msftdemo/azure/infrastructure_as_code/bicep/basic-example/main.bicep�6�~�qF�~�qF�~BRM�h�Wah�Wa�AA/workspaces/msftdemo/azure/infrastructure_as_code/bicep/basic-example/main.bicep�6�~�qF�~�qF�~��Ya�AA/workspaces/msftdemo/azure/infrastructure_as_code/bicep/basic-example/main.bicep�6�~�qF�~�qF�~-BVX����9�,�8�l���9�,~BRM�h�Wah�Wa�CVX����9�,�8�l���9�,~��YaBVX����9�,�8�l���9�,~BRM�h�Wah�Wa�CVX����9�,�8�l���9�,~��Ya�AVX����9�,�8�l���9�,~��JBVX����9�,�8�l���9�,~&��N}���N�AVX����9�,�8�l���9�,~��Ya���N�EVX����9�,�8�l���9�,~U�e0m38;2;35;77;112m���0mK0J38;2;33;199;168m������0m38;2;34;218;110m������0mK0J0;msftdemo0BVX����9�,�8�l���9�,~BRM�h�Wah�Wa�CVX����9�,�8�l���9�,~��Ya�AVX����9�,�8�l���9�,~��JBVX����9�,�8�l���9�,~&��N}���N�AVX����9�,�8�l���9�,~��Ya���N�EVX����9�,�8�l���9�,~U�e0m38;2;35;77;112m���0mK0J38;2;33;199;168m������0m38;2;34;218;110m������0mK0J0;msftdemo0BVX����9�,�8�l���9�,~BRM�h�Wah�Wa�CVX����9�,�8�l���9�,~��Yah�Wah�Wa�CVX����9�,�8�l���9�,~BVX����9�,�8�l���9�,~BRM�h�Wah�Wa�CVX����9�,�8�l���9�,~��Yah�Wah�Wa�CVX����9�,�8�l���9�,~
+Get-AzContext
+Set-AzContext Demo
+$RessursId = "/subscriptions/87b8def0-f5cf-402e-a8db-10e0ee958565/resourceGroups/arcbox-demo-rg/providers/Microsoft.Compute/virtualMachines/ArcBox-Client"`
+$NewTag = @{"Contact"="Håkon Magne Rødfjell"}`
+Update-AzTag -ResourceId $RessursId -Tag $NewTag -Operation Merge`
+`
+
+$RessursId = "/subscriptions/87b8def0-f5cf-402e-a8db-10e0ee958565/resourceGroups/arcbox-demo-rg/providers/Microsoft.Compute/virtualMachines/ArcBox-Client"`
+$NewTag = @{"Contact"="Håkon Magne Rødfjell2"}`
+Update-AzTag -ResourceId $RessursId -Tag $NewTag -Operation Merge`
+`
+
+$RessursId = "/subscriptions/87b8def0-f5cf-402e-a8db-10e0ee958565/resourceGroups/arcbox-demo-rg/providers/Microsoft.Compute/virtualMachines/ArcBox-Client"`
+$NewTag = @{"Contact"="Håkon Magne Rødfjell"}`
+Update-AzTag -ResourceId $RessursId -Tag $NewTag -Operation Merge
+dir env:
+dir env:PATH
+pwd
+ls /home
+$env:PATH
+$env:PATH = "/opt/microsoft/powershell/7:/vscode/bin/linux-x64/e2816fe719a4026ffa1ee0189dc89bdfdbafb164/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/vscode/bin"
+kubectl get nodes
+kubectl get pods
+az logout
+az login --use-device
+az account show
+az aks get-credentials --resource-group aks-demo-rg --name aks-arc-demo
+kubectl get pods
+az logout
+az login --use-device
+az aks get-credentials --resource-group aks-demo-rg --name aks-arc-demo
+kubectl get pods
+$env:PATH = "/opt/microsoft/powershell/7:/vscode/bin/linux-x64/e2816fe719a4026ffa1ee0189dc89bdfdbafb164/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/vscode/bin"
+kubectl get pods
+az aks get-credentials --resource-group aks-demo-rg --name aks-arc-demo
+kubectl get pods
+az aks get-credentials --resource-group aks-demo-rg --name aks-arc-demo
+kubectl get pods
+cd /home/vscode/.kube/cache
+ls
+cd ./kubelogin/
+ls
+Remove-Item ./AzurePublicCloud-6dae42f8-4368-4678-94ff-3960e28e3630-80faf920-1908-4b52-b5ef-a8e7bedfc67a-2b4eebff-4d00-40a1-bc77-23c093173f6a.json
+az aks get-credentials --resource-group aks-demo-rg --name aks-arc-demo
+ls
+kubectl get pods
+kubectl get nodes
+ls
+pwd
+cd /workspaces/
+ls
+git clone git@github.com:janegilring/azure-arc-jumpstart-apps.git
+cd /home/vscode/.ssh
+ls
+cat id_rsa.pub
+cd /workspaces/
+git clone git@github.com:janegilring/azure-arc-jumpstart-apps.git
+cd ./azure-arc-jumpstart-apps/
+git status
+git branch
+kubectl get deployments
+kubectl get deployments --all-namespaces
+kubectl get ns --show-labels
+kubectl get ns
+kubectl get deployments --all-namespaces
+kubectl get all -n flux-system
+kubectl get pods
+kubectl get deployments
+kubectl get deployments --all-namespaces
+cd /workspaces/azure-arc-jumpstart-apps/hello-arc
+ls
+kubectl apply -f /workspaces/azure-arc-jumpstart-apps/hello-arc/releases/app/hello-arc.yaml
+ls
+cd ..
+ls
+helm install --create-namespace --namespace hello-arc custom-message ./hello-arc --set message="Testing hello-arc"
+cd /workspaces/azure-arc-jumpstart-apps/hello-arc/charts/hello-arc
+helm install --create-namespace --namespace hello-arc custom-message ./hello-arc --set message="Testing hello-arc"
+cd /workspaces/azure-arc-jumpstart-apps/hello-arc/charts
+helm install --create-namespace --namespace hello-arc custom-message ./hello-arc --set message="Testing hello-arc"
+kubectl get deployments --namespace hello-arc
+kubectl get all --namespace hello-arc
+kubectl logs pod/custom-message-hello-arc-575fbfd7b4-t7jrb --namespace hello-arc
+kubectl port-forward deployment.apps/custom-message-hello-arc 81:80
+kubectl port-forward --namespace hello-arc deployment.apps/custom-message-hello-arc 81:80
+kubectl port-forward --namespace hello-arc deployment.apps/custom-message-hello-arc 8080:80
+kubectl port-forward --namespace hello-arc deployment.apps/custom-message-hello-arc 8080:8080
+helm list
+helm list --namespace hello-arc
+helm delete custom-message
+helm delete custom-message --namespace hello-arc
+kubectl get deployments --namespace hello-arc
+helm install --create-namespace --namespace hello-arc test-release ./hello-arc
+kubectl get deployments --namespace hello-arc
+kubectl port-forward --namespace hello-arc deployment.apps/test-release-hello-arc 8080:8080
+kubectl get pods --namespace hello-arc -o w
+kubectl get pods --namespace hello-arc -o wide
+kubectl port-forward --namespace hello-arc deployment.apps/test-release-hello-arc 8080:8080
+kubectl describe node aks-win01-22704200-vmss000002
+helm delete test-release --namespace hello-arc
+az aks get-credentials --resource-group aks-demo-rg --name aks-demo
+kubectl get nodes
+kubectl describe node akswin01000000
+docker ps
+$env:PATH = "/opt/microsoft/powershell/7:/vscode/bin/linux-x64/e2816fe719a4026ffa1ee0189dc89bdfdbafb164/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/vscode/bin"
+kubectl get nodes
+kubectl run hello-arc-windows --image liorkamrat/hello-arc --overrides='{"apiVersion": "v1", "spec": {"nodeSelector": { "kubernetes.io/os": "linux" }}}'
+$env:PATH = "/opt/microsoft/powershell/7:/vscode/bin/linux-x64/e2816fe719a4026ffa1ee0189dc89bdfdbafb164/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/vscode/bin"
+kubectl run hello-arc-windows --image liorkamrat/hello-arc --overrides='{"apiVersion": "v1", "spec": {"nodeSelector": { "kubernetes.io/os": "linux" }}}'
+kubectl get pods
+kubectl describe pod hello-arc-windows
+kubectl get pods
+kubectl exec --stdin --tty hello-arc-windows -- /bin/bash
+kubectl cp hello-arc-windows:/usr/src/app /workspaces/msftdemo/tmp
+kubectl run hello-arc-windows --image liorkamrat/hello-arc --overrides='{"apiVersion": "v1", "spec": {"nodeSelector": { "kubernetes.io/os": "windows" }}}'
+kubectl delete pod hello-arc-windows
+kubectl run hello-arc-windows --image liorkamrat/hello-arc --overrides='{"apiVersion": "v1", "spec": {"nodeSelector": { "kubernetes.io/os": "windows" }}}'
+kubectl get pods
+kubectl describe pods hello-arc-windows
+kubectl delete pod hello-arc-windows
+kubectl run hello-arc-windows --image janegilring/hello-arc-windows --overrides='{"apiVersion": "v1", "spec": {"nodeSelector": { "kubernetes.io/os": "windows" }}}'
+kubectl get pods
+kubectl describe pods hello-arc-windows
+kubectl get pods
+kubectl port-forward hellow-arc-windows 8080:8080
+kubectl port-forward hello-arc-windows 8080:8080
+Get-AzProviderFeature -ProviderNamespace Microsoft.Resources -FeatureName deploymentStacksPreview
+Register-AzProviderFeature -ProviderNamespace Microsoft.Resources -FeatureName deploymentStacksPreview
+Get-AzProviderFeature -ProviderNamespace Microsoft.Resources -FeatureName deploymentStacksPreview
+cd ~
+ls
+mkdir downloads
+cp /workspaces/tine-iac/AzDeploymentStacksPrivatePreview_Powershell_9.1.8.zip .
+ls
+rm ./AzDeploymentStacksPrivatePreview_Powershell_9.1.8.zip
+cd ./downloads/
+cp /workspaces/tine-iac/AzDeploymentStacksPrivatePreview_Powershell_9.1.8.zip .
+ls
+cp /workspaces/tine-iac/Stacks_CLI_1.8.zip .
+ls
+cls
+unzip ./AzDeploymentStacksPrivatePreview_Powershell_9.1.8.zip
+ls
+unzip ./Stacks_CLI_1.8.zip
+cd ./AzDeploymentStacksPrivatePreview_Powershell_9.1.8
+ls
+cat ./README.md
+cat readme.txt
+pwd
+cat ./readme.txt
+ls
+pwd
+cat /home/vscode/downloads/AzDeploymentStacksPrivatePreview_Powershell_9.1.8/readme.txt
+ls
+cat ./Readme.txt
+./AzDeploymentStacksPrivatePreview.ps1
+gmo -list
+Install-Module -Name Az -Force
+gmo -list
+`
+mkdir downloads
+cd downloads
+cd ./AzDeploymentStacksPrivatePreview_Powershell_9.1.8
+pwd
+ls
+cd ~
+cd downloads
+cd ./AzDeploymentStacksPrivatePreview_Powershell_9.1.8
+./AzDeploymentStacksPrivatePreview.ps1 #option 1
+gmo
+gmo -list
+gmo
+cd ~
+cd downloads
+cd ./AzDeploymentStacksPrivatePreview_Powershell_9.1.8
+./AzDeploymentStacksPrivatePreview.ps1 #option 1
+$PSVersionTable
+./AzDeploymentStacksPrivatePreview.ps1 #option 1
+gmo -list -name az.resources
+gmo
+Import-Module -Name Az.Resources -RequiredVersion 9.1.8
+gmo
+Get-Command -Name *DeploymentStack*
+pip
+cls
+bicep
+bicep --version
+cd /workspaces/msftdemo/azure/infrastructure_as_code/deployment_stacks/first_deploy
+ls
+New-AzSubscriptionDeploymentStack -Name 'firstDeploy' -Location 'eastus' -TemplateFile './main.bicep'
+Get-AzSubscriptionDeploymentStack
+(Get-AzSubscriptionDeploymentStack -Name firstDeploy).Resources
+New-AzSubscriptionDeploymentStack -Name 'firstDeploy' -Location 'eastus' -TemplateFile './main.bicep'
+Get-Command -Name *DeploymentStack*
+New-AzSubscriptionDeploymentStack -Name 'firstDeploy' -TemplateFile './main.bicep' -DenySettingsMode 'DenyDelete'
+Remove-AzSubscriptionDeploymentStack -DeleteAll
+Remove-AzSubscriptionDeploymentStack -Name 'firstDeploy' -DeleteAll
+docker ps
+Get-AzContext
+Get-AzContext | fl
+New-AzVirtualNetwork -Name aci-vnet-we -ResourceGroupName aci-rg -Location westeurope -AddressPrefix 10.10.30.0/22
+New-AzResourceGroup -Name aci-rg -Location westeurope
+New-AzVirtualNetwork -Name aci-vnet-we -ResourceGroupName aci-rg -Location westeurope -AddressPrefix 10.10.30.0/22
+New-AzVirtualNetwork -Name aci-vnet-we -ResourceGroupName aci-rg -Location westeurope -AddressPrefix 10.10.28.0/22
+kubectl get nodes
+$env:PATH = "/opt/microsoft/powershell/7:/vscode/bin/linux-x64/e2816fe719a4026ffa1ee0189dc89bdfdbafb164/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/vscode/bin"
+kubectl get nodes
+kubectl get deployments
+helm list --namespace hello-arc
+helm repo add gitlab https://charts.gitlab.io/
+helm repo update
+helm upgrade --install gitlab gitlab/gitlab ``
+  --timeout 600s ``
+  --set global.hosts.domain=example.com ``
+  --set global.hosts.externalIP=10.10.10.10 ``
+  --set certmanager-issuer.email=jan.egil.ring@outlook.com ``
+  --set postgresql.image.tag=13.6.0
+helm delete gitlab
+kubectl get pods
+kubectl delete pod hello-arc-windows
+kubectl get nodes
+az network public-ip create ``
+    --resource-group aks-demo-rg ``
+    --name gitlab-demo-pip ``
+    --sku Standard ``
+    --allocation-method static
+az network public-ip create ``
+    --resource-group aks-demo-rg ``
+    --location westeurope ``
+    --name gitlab-demo-pip ``
+    --sku Standard ``
+    --allocation-method static
+kubectl apply -f /workspaces/msftdemo/azure/containers/azure_kubernetes_service/gitlab/loadbalancer.yaml
+helm upgrade --install gitlab gitlab/gitlab ``
+  --timeout 600s ``
+  --set global.hosts.domain=gitlab-demo.westeurope.cloudapp.azure.com ``
+  --set global.hosts.externalIP=52.166.160.177 ``
+  --set certmanager-issuer.email=jan.egil.ring@outlook.com ``
+  --set postgresql.image.tag=13.6.0
+kubectl get pods
+kubectl get service
+kubectl delete -f /workspaces/msftdemo/azure/containers/azure_kubernetes_service/gitlab/loadbalancer.yaml
+    az aks list --resource-group aks-demo-rg
+    az role assignment create ``
+    --assignee 51e87d0c-a675-4f16-bfa9-2e834ad0263d ``
+    --role "Network Contributor" ``
+    --scope /subscriptions/87b8def0-f5cf-402e-a8db-10e0ee958565/resourceGroups/aks-demo-rg`
+
+kubectl apply -f /workspaces/msftdemo/azure/containers/azure_kubernetes_service/gitlab/loadbalancer.yaml
+kubectl get service
+kubectl get service azure-load-balancer
+kubectl describe service azure-load-balancer
+kubectl delete -f /workspaces/msftdemo/azure/containers/azure_kubernetes_service/gitlab/loadbalancer.yaml
+kubectl apply -f /workspaces/msftdemo/azure/containers/azure_kubernetes_service/gitlab/loadbalancer.yaml
+kubectl describe service azure-load-balancer
+    az role assignment create ``
+    --assignee 87d4a270-bfbf-4a88-9bc1-0d6b6c9163c0 ``
+    --role "Network Contributor" ``
+    --scope /subscriptions/87b8def0-f5cf-402e-a8db-10e0ee958565/resourceGroups/aks-demo-rg`
+
+kubectl describe service azure-load-balancer
+kubectl delete -f /workspaces/msftdemo/azure/containers/azure_kubernetes_service/gitlab/loadbalancer.yaml
+kubectl apply -f /workspaces/msftdemo/azure/containers/azure_kubernetes_service/gitlab/loadbalancer.yaml
+kubectl describe service azure-load-balancer
+kubectl get deployments
+kubectl get ingress
+kubectl get service
+kubectl describe service gitlab-nginx-ingress-controller
+kubectl delete -f /workspaces/msftdemo/azure/containers/azure_kubernetes_service/gitlab/loadbalancer.yaml
+az network public-ip create ``
+    --resource-group MC_aks-demo-rg_aks-demo_westeurope ``
+    --location westeurope ``
+    --name gitlab-demo-pip ``
+    --sku Standard ``
+    --allocation-method static
+helm delete gitlab
+kubectl get service
+kubectl get pods
+kubectl get pods
+helm upgrade --install gitlab gitlab/gitlab ``
+  --timeout 600s ``
+  --set global.hosts.domain=cicd-demo.powershell.no ``
+  --set global.hosts.externalIP=168.63.30.205 ``
+  --set certmanager-issuer.email=jan.egil.ring@outlook.com ``
+  --set postgresql.image.tag=13.6.0
+kubectl get pods
+kubectl get service
+kubectl get pods
+cat /home/vscode/.ssh/id_rsa.pub
+pwd
+cd ..
+pwd
+git clone git@gitlab.cicd-demo.powershell.no:azure/Platform.git gitlab-azure-platform
+pwd
+git clone git@gitlab.cicd-demo.powershell.no:azure/landing-zone-1.git gitlab-landing-zone-1
+cd /workspaces/gitlab-landing-zone-1/terraform
+ls
+terraform init
+terraform plan
+pwd
+cd ..
+ls
+git clone git@gitlab.com:massimocannavo/azure-landing-zone.git alz-tmp
+git clone https://gitlab.com/massimocannavo/azure-landing-zone.git alz-tmp
+���
+az role assignment create --assignee $appId --role Contributor --scope /subscriptions/87b8def0-f5cf-402e-a8db-10e0ee958565
+$appId = "b03151a1-6377-4f7f-aa79-f65e9d47b7c0"
+az role assignment create --assignee $appId --role Contributor --scope /subscriptions/87b8def0-f5cf-402e-a8db-10e0ee958565
+az vm list -o table
+dir env:
+cd /workspaces/azure-arc-jumpstart-apps
+git pull
+git branch main
+git branch -M main
+git pull
+git config pull.ff only
+git pull
+git config pull.rebase true
+git pull
+git status
+git pull
+git config pull.ff only
+git pull
+git pull origin main
+git remote
+git branch
+git branch hello-arc-optimizations
+git pull
+cd ..
+ls
+Rename-Item ./azure-arc-jumpstart-apps_old
+Rename-Item ./azure-arc-jumpstart-apps -NewName azure-arc-jumpstart-apps_old
+git clone git@github.com:janegilring/azure-arc-jumpstart-apps.git
+git branch
+cd ./azure-arc-jumpstart-apps/
+git branch
+git pull
+git pull origin hello-arc-optimizations
+git branch
+git branch -M hello-arc-optimizations
+git branch
+ls
+cd ./hello-arc-windows/
+ls
+cd ./releases/
+ls
+cd ./app/
+ls
+helm install --create-namespace --namespace hello-arc hello-arc-windows .
+kubectl get pods
+$env:PATH = "/opt/microsoft/powershell/7:/vscode/bin/linux-x64/e2816fe719a4026ffa1ee0189dc89bdfdbafb164/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/vscode/bin"
+kubectl get pods
+kubectl get nodes
+kubectl run hello-arc-windows --image azurearcjumpstart.azurecr.io/hello-arc:windows --overrides='{"apiVersion": "v1", "spec": {"nodeSelector": { "kubernetes.io/os": "windows" }}}'
+kubectl get pods
+kubectl get pods hello-arc-windows
+kubectl port-forward hello-arc-windows 8080:8080
+kubectl delete pods hello-arc-windows
+kubectl get ns
+cd /workspaces/azure-arc-jumpstart-apps
+helm install --create-namespace --namespace hello-arc hello-arc-windows ./hello-arc-windows/charts
+helm install --create-namespace --namespace hello-arc hello-arc-windows ./hello-arc-windows/charts/hello-arc
+helm install hello-arc-windows ./hello-arc-windows/charts/hello-arc
+kubectl get deployments
+kubectl get deployments --all-namespaces
+kubectl get pods
+helm list
+helm delete hello-arc-windows
+helm install hello-arc-windows ./hello-arc-windows/charts/hello-arc
+kubectl get deployments
+kubectl get pods
+kubectl describe pod hello-arc-windows-74dc7796f7-pt4x8
+helm delete hello-arc-windows
+helm install hello-arc-windows ./hello-arc-windows/charts/hello-arc
+kubectl get deployments
+kubectl get pods
+kubectl get deployments
+kubectl port-forward hello-arc-windows 8080:8080
+kubectl get pods
+kubectl port-forward hello-arc-windows-6d57546f88-5vclq 8080:8080
+helm delete hello-arc-windows
+helm delete hello-arc-windows --namespace hello-arc
+pwd
+git status
+Get-AzContext
+New-AzSubscriptionDeploymentStack -Name 'firstDeploy' -Location 'eastus' -TemplateFile './main.bicep'
+cd /workspaces/msftdemo/azure/infrastructure_as_code/deployment_stacks/first_deploy
+New-AzSubscriptionDeploymentStack -Name 'firstDeploy' -Location 'eastus' -TemplateFile './main.bicep'
+New-AzSubscriptionDeploymentStack -Name 'firstDeploy' -TemplateFile './main.bicep' -DenySettingsMode 'DenyDelete' -Location eastus
+Get-AzADUser -PipelineVariable users
+Get-AzADUser -PipelineVariable user | ForEach-Object {Write-Output "Current user is $($user.DisplayName)"}
+Get-Process -PipelineVariable process | ForEach-Object {Write-Output "Current process is $($process.Name)"}
+Get-AzADUser -PipelineVariable user | ForEach-Object {Write-Output "Current user is $($user.DisplayName)"}
+Get-AzVMRunCommandDocument
+Set-AzVMRunCommand -ResourceGroupName vm-demo-rg -VMName winvm01 -Location westeurope -RunCommandName helloworld -SourceScript "echo Hello World!"
+Set-AzContext "Landing Zone"
+Set-AzVMRunCommand -ResourceGroupName vm-demo-rg -VMName winvm01 -Location westeurope -RunCommandName helloworld -SourceScript "echo Hello World!"
+$vm = "winvm01"`
+$rg = "vm-demo-rg"`
+$location = "westeurope"
+Get-AzVMRunCommand -ResourceGroupName $rg -VMName $vm
+Get-AzVMRunCommand -ResourceGroupName $rg -VMName $vm -RunCommandName helloworld -Expand InstanceView
+Get-AzVMRunCommand -ResourceGroupName $rg -VMName $vm -RunCommandName helloworld -Expand InstanceView |`
+Select-Object -ExpandProperty InstanceView
+$vm = "linvm01"
+Set-AzVMRunCommand -ResourceGroupName $rg -VMName $vm -Location $location -RunCommandName helloworld -SourceScript "echo Hello World!"
+Get-AzVMRunCommand -ResourceGroupName $rg -VMName $vm -RunCommandName helloworld -Expand InstanceView |`
+Select-Object -ExpandProperty InstanceView
+cd /workspaces/msftdemo/azure/infrastructure_as_code/deployment_stacks/multiple_subscriptions
+New-AzSubscriptionDeploymentStack -Name 'multiple_subscriptions' -Location 'norwayeast' -TemplateFile './main.bicep'
+New-AzSubscriptionDeploymentStack -Name 'multiple_subscriptions' -TemplateFile './main.bicep' -DenySettingsMode 'DenyDelete' -Location norwayeast
+cd /workspaces/msftdemo/azure/infrastructure_as_code/deployment_stacks/multiple_subscriptions
+New-AzSubscriptionDeploymentStack -Name 'multiple_subscriptions' -TemplateFile './main.bicep' -DenySettingsMode 'DenyDelete' -Location norwayeast
+Set-AzSubscriptionDeploymentStack -Name 'multiple_subscriptions' -TemplateFile './main.bicep' -DenySettingsMode 'DenyDelete' -Location norwayeast
+gmo
+gcm *AzSubscriptionDeploymentStack*
+Get-AzSubscriptionDeploymentStack -Name 'multiple_subscriptions'
+Get-AzSubscriptionDeploymentStack -Name 'multiple_subscriptions' |`
+Select-Object -ExpandProperty resources
+cd ..
+ls
+git clone git@github.com:stalejohnsen/NSM_GP-IKT_2_0_policyinitative.git
+cd ./NSM_GP-IKT_2_0_policyinitative/
+ls
+gi ./NSM_GP-IKT_2_0.json
+gi ./NSM_GP-IKT_2_0.json | fl
+gi ./NSM_GP-IKT_2_0.json | fl fullname
+Get-AzContext
+$location = 'norwayeast'`
+$mgId = 'Contoso'`
+$templateFile = '/workspaces/NSM_GP-IKT_2_0_policyinitative/NSM_GP-IKT_2_0.json'`
+`
+New-AzManagementGroupDeployment -ManagementGroupId $mgId -Location $location -TemplateFile $templateFile -Verbose`
+
+$location = 'norwayeast'`
+$mgId = 'con'`
+$templateFile = '/workspaces/NSM_GP-IKT_2_0_policyinitative/NSM_GP-IKT_2_0.json'`
+`
+New-AzManagementGroupDeployment -ManagementGroupId $mgId -Location $location -TemplateFile $templateFile -Verbose`
+
+Open-EditorFile $templateFile
+cd /workspaces/azure_arc/
+git pull
+ls
+cd /workspaces/azure_arc/azure_arc_k8s_jumpstart/aks_hybrid/aks_edge_essentials/arm_template
+ls
+Open-EditorFile ./azuredeploy.parameters.example.json
+Copy-Item /workspaces/azure_arc/azure_jumpstart_arcbox/bicep/main.parameters.json /workspaces/msftdemo/azure/arc/arcbox
+$RGname = "aks-ee-rg"`
+az group create --name $RGname --location "northeurope"`
+
+az deployment group create -g $RGname -f "azuredeploy.json" -p "/workspaces/msftdemo/azure/arc/aks/edge_essentials/azuredeploy.parameters.json"
+Get-AzApplicationSecurityGroup
+Get-AzContext
+Set-AzContext Demo
+Get-AzApplicationSecurityGroup
+$asg = Get-AzApplicationSecurityGroup -ResourceGroupName "networking-rg" -Name "sql-servers"
+$asg.Members
+$asg
+$asg | gm
+gcm Get-AzApplicationSecurityGroup*
+gcm *AzApplicationSecurityGroup*
+az network nic list --query "[].[ipConfigurations[].applicationSecurityGroups[? contains(id,``sql-servers``)],virtualMachine]"
+  $serverName = "Arcbox-Ubuntu-01"`
+    $RGname = "arcbox-demo3-rg"
+`
+    az ssh arc --resource-group $RGname --name $serverName
+ls /tmp
+az ssh config --resource-group $RGname --name $serverName --file ./sshconfig
+ls .
+cat ./sshconfig
+ssh -F ./sshconfig arcbox-demo3-rg-Arcbox-Ubuntu-01
+cat ./sshconfig
+az extension add --upgrade --yes --name connectedk8s
+$CLUSTER_NAME="ArcBox-CAPI-Data-6fd8"`
+$RESOURCE_GROUP="arcbox-demo-rg"
+$ARM_ID_CLUSTER=$(az connectedk8s show -n $CLUSTER_NAME -g $RESOURCE_GROUP --query id -o tsv)
+$ARM_ID_CLUSTER
+kubectl config get-contexts
+az aks get-credentials --resource-group $RESOURCE_GROUP --name $CLUSTER_NAME --admin
+az connectedk8s show --resource-group $CLUSTER_NAME --name $CLUSTER_NAME
+az connectedk8s show --resource-group $RESOURCE_GROUP --name $CLUSTER_NAME
+az connectedk8s proxy -n $CLUSTER_NAME -g $RESOURCE_GROUP
+az role assignment create --role "Azure Arc Kubernetes Cluster Admin" --assignee 6094bbd7-54e5-4528-aa18-e039a817fe87 --scope $ARM_ID
+$ARM_ID
+az role assignment create --role "Azure Arc Kubernetes Cluster Admin" --assignee 6094bbd7-54e5-4528-aa18-e039a817fe87 --scope $ARM_ID_CLUSTER
+az connectedk8s proxy -n $CLUSTER_NAME -g $RESOURCE_GROUP
+$CLUSTER_NAME="ArcBox-K3s-6fd8"
+$ARM_ID_CLUSTER=$(az connectedk8s show -n $CLUSTER_NAME -g $RESOURCE_GROUP --query id -o tsv)
+az connectedk8s show --resource-group $RESOURCE_GROUP --name $CLUSTER_NAME
+az connectedk8s proxy -n $CLUSTER_NAME -g $RESOURCE_GROUP
+  cd /workspaces
+ls
+  git clone https://github.com/Azure/ipam.git
+Get-AzContext
+  ./deploy.ps1 ``
+  -Location "northeurope" ``
+  -UIAppName "caf-ipam-ui" ``
+  -EngineAppName "caf-ipam-engine"``
+  -Tags @{owner = 'janegilring@microsoft.com'; environment = 'demo'}
+cd ./ipam
+  ./deploy.ps1 ``
+  -Location "northeurope" ``
+  -UIAppName "caf-ipam-ui" ``
+  -EngineAppName "caf-ipam-engine"``
+  -Tags @{owner = 'janegilring@microsoft.com'; environment = 'demo'}
+ls
+cd /workspaces/ipam/deploy
+./deploy.ps1 ``
+  -Location "northeurope" ``
+  -UIAppName "caf-ipam-ui" ``
+  -EngineAppName "caf-ipam-engine"``
+  -Tags @{owner = 'janegilring@microsoft.com'; environment = 'demo'}
+Install-Module Microsoft.Graph -Scope CurrentUser
+./deploy.ps1 ``
+  -Location "northeurope" ``
+  -UIAppName "caf-ipam-ui" ``
+  -EngineAppName "caf-ipam-engine"``
+  -Tags @{owner = 'janegilring@microsoft.com'; environment = 'demo'}
+cd /workspaces/ipam/deploy
+`
+  ./deploy.ps1 ``
+  -Location "northeurope" ``
+  -UIAppName "caf-ipam-ui" ``
+  -EngineAppName "caf-ipam-engine"``
+  -Tags @{owner = 'janegilring@microsoft.com'; environment = 'demo'}
+pwd
+cd ..
+git clone git@github.com:janegilring/lzvendingipam.git
+cd ./lzvendingipam/
+ls
+dir
+dir | Copy-Item -Destination /workspaces/msftdemo/azure/cloud-adoption-framework/landing-zones/ipam-demo
+dir | Copy-Item -Destination /workspaces/msftdemo/azure/cloud-adoption-framework/landing-zones/ipam-demo -Recurse
+Get-ChildItem -Path .\azure\cloud-adoption-framework\landingZones\ipam-demo\landingZones\corp\
+Get-ChildItem -Path .\azure\cloud-adoption-framework\landingZones
+Get-ChildItem -Path .\azure\cloud-adoption-framework\landin-zones\ipam-demo\landingZones\corp\
+dir /workspaces/msftdemo/azure/cloud-adoption-framework/landing-zones/ipam-demo/landingZones/corp
+Get-ChildItem -Path .\azure\cloud-adoption-framework\landing-zones\ipam-demo\landingZones\corp\ -Filter *.json
+Set-Location ~
+Set-Location downloads
+ls
+ls /workspaces
+unzip ./AzDeploymentStacksPrivatePreview_Powershell_9.1.9.zip
+unzip ./Stacks_CLI_1.9.zip
+Set-Location ./AzDeploymentStacksPrivatePreview_Powershell_9.1.9
+./AzDeploymentStacksPrivatePreview.ps1
+./AzDeploymentStacksPrivatePreview.ps1 #option 1 fails: https://github.com/Azure/deployment-stacks/issues/91
+Get-Module -list -name az.resource
+Import-Module -Name Az.Resources -RequiredVersion 9.1.9
+Get-Module -list -name az.resource
+Import-Module -Name Az.Resources -RequiredVersion 9.1.9
+Get-Module -list -name az.resource
+Get-Module -list -name az.resources
+Get-Command -Name *DeploymentStack*
+cd "/workspaces/msftdemo/azure/infrastructure_as_code/deployment_stacks/mg_scope"
+New-AzManagementGroupDeploymentStack -Name 'mg-scope-demo' -Location 'norwayeast' -TemplateFile './main.bicep'
+New-AzManagementGroupDeploymentStack -ManagementGroupId con -Name 'mg-scope-demo' -Location 'norwayeast' -TemplateFile './main.bicep'
+New-AzManagementGroupDeploymentStack -ManagementGroupId con -Name 'mg-scope-demo' -Location 'norwayeast' -TemplateFile './main.bicep' -DeploymentSubscriptionId 57e14e5c-cd9a-4a8d-9575-f39835f3048c
+New-AzManagementGroupDeploymentStack -ManagementGroupId con-landingzones-corp -Name 'lz-vnet-peering' -Location 'norwayeast' -TemplateFile './main.bicep' -DeploymentSubscriptionId 57e14e5c-cd9a-4a8d-9575-f39835f3048c
+Get-AzManagementGroupDeploymentStack
+Get-AzManagementGroupDeploymentStack -ManagementGroupId con-landingzones-corp 
+Set-AzManagementGroupDeploymentStack -ManagementGroupId con-landingzones-corp -Name 'lz-vnet-peering' -Location 'norwayeast' -TemplateFile './main.bicep' -DeploymentSubscriptionId 57e14e5c-cd9a-4a8d-9575-f39835f3048c
+Get-AzManagementGroupDeploymentStack -ManagementGroupId con-landingzones-corp -Name 'lz-vnet-peering' |`
+Remove-AzManagementGroupDeploymentStack`
+
+Remove-AzManagementGroupDeploymentStack -ManagementGroupId con-landingzones-corp -Name 'lz-vnet-peering'
+Get-AzManagementGroupDeploymentStack -ManagementGroupId con-landingzones-corp -Name 'lz-vnet-peering'
+Get-AzManagementGroupDeploymentStack -ManagementGroupId con-landingzones-corp
+Get-AzSubscriptionDeploymentStack
+Get-AzSubscriptionDeploymentStack -Name 'multiple_subscriptions' |`
+Select-Object -ExpandProperty resources`
+
+Get-AzContext
+Set-AzContext "Landing Zone"
+Get-AzSubscriptionDeploymentStack -Name 'multiple_subscriptions' |`
+Select-Object -ExpandProperty resources`
+
+Remove-AzSubscriptionDeploymentStack -Name 'multiple_subscriptions' -DeleteAll
+Remove-AzSubscriptionDeploymentStack -Name 'multiple_subscriptions' 
+Get-AzSubscriptionDeploymentStack -Name 'multiple_subscriptions' |`
+Select-Object -ExpandProperty resources`
+
+New-AzManagementGroupDeploymentStack -ManagementGroupId con-landingzones-corp -Name 'lz-vnet-peering' -Location 'norwayeast' -TemplateFile './main.bicep' -DeploymentSubscriptionId 57e14e5c-cd9a-4a8d-9575-f39835f3048c
+Remove-AzManagementGroupDeploymentStack -ManagementGroupId con-landingzones-corp -Name 'lz-vnet-peering' -DeleteResources
+New-AzManagementGroupDeploymentStack -ManagementGroupId con-landingzones-corp -Name 'lz-vnet-peering' -Location 'norwayeast' -TemplateFile './main.bicep' -DeploymentSubscriptionId 57e14e5c-cd9a-4a8d-9575-f39835f3048c -DeleteAll
+Set-AzManagementGroupDeploymentStack -ManagementGroupId con-landingzones-corp -Name 'lz-vnet-peering' -Location 'norwayeast' -TemplateFile './main.bicep' -DeploymentSubscriptionId 57e14e5c-cd9a-4a8d-9575-f39835f3048c -DenySettingsMode DenyDelete
+Set-AzManagementGroupDeploymentStack -ManagementGroupId con-landingzones-corp -Name 'lz-vnet-peering' -Location 'norwayeast' -TemplateFile './main.bicep' -DeploymentSubscriptionId 57e14e5c-cd9a-4a8d-9575-f39835f3048c -DenySettingsMode DenyDelete -Tag @{Environment="Demo"}
+Get-AzManagementGroupDeploymentStack -ManagementGroupId con-landingzones-corp -Name 'lz-vnet-peering'
+$Project = "app1"
+Get-ChildItem -Path /workspaces/msftdemo/azure/cloud-adoption-framework/landing-zones/ipam-demo/landingZones/corp
+Get-ChildItem -Path /workspaces/msftdemo/azure/cloud-adoption-framework/landing-zones/ipam-demo/landingZones/corp | Sort-Object LastWriteTime -Descending
+Get-ChildItem -Path /workspaces/msftdemo/azure/cloud-adoption-framework/landing-zones/ipam-demo/landingZones/corp | Sort-Object Name -Descending
+Get-ChildItem -Path /workspaces/msftdemo/azure/cloud-adoption-framework/landing-zones/ipam-demo/landingZones/corp | Sort-Object Name
+Get-ChildItem -Path /workspaces/msftdemo/azure/cloud-adoption-framework/landing-zones/ipam-demo/landingZones/corp | Sort-Object Name  | select -last 1
+Get-ChildItem -Path /workspaces/msftdemo/azure/cloud-adoption-framework/landing-zones/ipam-demo/landingZones/corp | Sort-Object Name -desc  | select -first 1
+az account set -s "87b8def0-f5cf-402e-a8db-10e0ee958565"
+cd /workspaces/azure_arc/
+git clone
+git pull
+$RGname = "arcbox-demo2-rg"
+az group create --name $RGname --location "northeurope"
+cd /workspaces/azure_arc/azure_jumpstart_arcbox/bicep
+az deployment group create -g $RGname -f "main.bicep" -p "main.parameters.json"
+cd /workspaces/azure_arc/
+git pull origin jumpstart_ag
+git pull
+git branch main
+git checkout main
+git pull origin jumpstart_ag
+git config pull.ff only
+git pull origin jumpstart_ag
+git config pull.rebase false
+git pull origin jumpstart_ag
+git config pull.ff
+git config pull.ff --help
+git pull --ff-only upstream jumpstart_ag
+git pull --ff-only origin jumpstart_ag
+git pull origin jumpstart_ag
+git config --global pull.rebase true
+git pull origin jumpstart_ag
+git pull origin jumpstart_ag --rebase
+git pull origin jumpstart_ag --rebase --no-ff
+git status
+git stash
+git status
+git pull origin jumpstart_ag
+git pull origin jumpstart_ag --rebase
+git pull origin jumpstart_ag --rebase --no-ff
+git pull origin jumpstart_ag
+git config pull.ff only
+git pull origin jumpstart_ag
+git pull origin/jumpstart_ag
+git pull origin jumpstart_ag
+git checkout jumpstart_ag
+git status
+git log
+git remote -v
+git branch
+$RGname = "jumpstart-agora-rg"
+az group create --name $RGname --location "northeurope"
+ls
+cd /workspaces/azure_arc/azure_jumpstart_ag/bicep/
+ls
+copy ./main.parameters.json /workspaces/msftdemo/azure/arc/agora/main.parameters.json
+az deployment group create -g $RGname -f "main.bicep" -p /workspaces/msftdemo/azure/arc/agora/main.parameters.json
+cls
+Get-AzAccount
+# Set variables`
+$resource = "https://management.core.windows.net/"`
+$apiVersion = "2023-03-01"
+$scopes = Get-AzSubscription -SubscriptionId $subscriptionId | Select-Object -ExpandProperty Id`
+$budgets = @()
+$scopes 
+$AccessToken
+$resource
+$AccessToken 
+Get-AzSubscription Demo 
+Get-AzSubscription -SubscriptionName "Demo"
+$scopes = Get-AzSubscription -SubscriptionName "Demo" | Select-Object -ExpandProperty Id`
+$budgets = @()
+$scopes
+foreach ($scope in $scopes) {`
+    $url = "https://management.azure.com/$scope/providers/Microsoft.Consumption/budgets?api-version=$apiVersion"`
+    $result = Invoke-RestMethod -Method Get -Uri $url -Headers @{Authorization=("Bearer " + $AccessToken)}`
+`
+    # Add budgets to array`
+    foreach ($budget in $result.value) {`
+        $budgets += [PSCustomObject]@{`
+            Scope = $budget.scope`
+            Name = $budget.name`
+            Amount = $budget.amount`
+            Category = $budget.category`
+        }`
+    }`
+}`
+
+$url
+    $url = "https://management.azure.com/$scope/providers/Microsoft.Consumption/budgets?api-version=$apiVersion"
+$resource = "https://management.core.windows.net/"`
+$apiVersion = "2023-03-01"
+$apiVersion
+foreach ($scope in $scopes) {`
+    $url = "https://management.azure.com/$scope/providers/Microsoft.Consumption/budgets?api-version=$apiVersion"`
+    $result = Invoke-RestMethod -Method Get -Uri $url -Headers @{Authorization=("Bearer " + $AccessToken)}`
+`
+    # Add budgets to array`
+    foreach ($budget in $result.value) {`
+        $budgets += [PSCustomObject]@{`
+            Scope = $budget.scope`
+            Name = $budget.name`
+            Amount = $budget.amount`
+            Category = $budget.category`
+        }`
+    }`
+}
+Get-AzResourceGroup
+$apiVersion = "2019-10-01"
+foreach ($scope in $scopes) {`
+`
+    $url = "https://management.azure.com/$scope/providers/Microsoft.Consumption/budgets?api-version=$apiVersion"`
+    $result = Invoke-RestMethod -Method Get -Uri $url -Headers @{Authorization=("Bearer " + $AccessToken)}`
+`
+    # Add budgets to array`
+    foreach ($budget in $result.value) {`
+        $budgets += [PSCustomObject]@{`
+            Scope = $budget.scope`
+            Name = $budget.name`
+            Amount = $budget.amount`
+            Category = $budget.category`
+        }`
+    }`
+}
+foreach ($scope in $scopes) {`
+`
+    $url = "https://management.azure.com/subscriptions/$scope/providers/Microsoft.Consumption/budgets?api-version=$apiVersion"`
+    $result = Invoke-RestMethod -Method Get -Uri $url -Headers @{Authorization=("Bearer " + $AccessToken)}`
+`
+    # Add budgets to array`
+    foreach ($budget in $result.value) {`
+        $budgets += [PSCustomObject]@{`
+            Scope = $budget.scope`
+            Name = $budget.name`
+            Amount = $budget.amount`
+            Category = $budget.category`
+        }`
+    }`
+}
+$budgets
+ $result
+ $result.value
+ $result.value.properties
+Get-AzManagementGroup
+$scope = "/providers/Microsoft.Management/managementGroups/con-platform"
+    $url = "https://management.azure.com$scope/providers/Microsoft.Consumption/budgets?api-version=$apiVersion"
+    $result = Invoke-RestMethod -Method Get -Uri $url -Headers @{Authorization=("Bearer " + $AccessToken)}
+$result
+$result.value
+$scopes = @()`
+$scopes += Get-AzSubscription -SubscriptionName "Demo" | Select-Object -Property @{n=Id;Expression={'/subscriptions' + $PSItem.Id}} | Select-Object -ExpandProperty Id`
+$scopes += Get-AzManagementGroup | Select-Object -ExpandProperty Id
+$scopes += Get-AzSubscription -SubscriptionName "Demo" | Select-Object -Property @{n='Id';Expression={'/subscriptions' + $PSItem.Id}} | Select-Object -ExpandProperty Id
+$scopes += Get-AzManagementGroup | Select-Object -ExpandProperty Id
+$budgets = @()
+$scopes
+$scopes = @()`
+$scopes += Get-AzSubscription -SubscriptionName "Demo" | Select-Object -Property @{n='Id';Expression={'/subscriptions' + $PSItem.Id + '/'}} | Select-Object -ExpandProperty Id`
+$scopes += Get-AzManagementGroup | Select-Object -ExpandProperty Id
+$scopes
+$scopes = @()`
+$scopes += Get-AzSubscription -SubscriptionName "Demo" | Select-Object -Property @{n='Id';Expression={'/subscriptions/' + $PSItem.Id}} | Select-Object -ExpandProperty Id`
+$scopes += Get-AzManagementGroup | Select-Object -ExpandProperty Id
+$scopes
+Get-AzResourceGroup
+Get-AzResourceGroup | Select-Object -ExpandProperty ResourceId
+$scopes = @()`
+`
+$scopes += Get-AzManagementGroup | Select-Object -ExpandProperty Id`
+`
+$scopes += Get-AzSubscription -SubscriptionName "Demo" | Select-Object -Property @{n='Id';Expression={'/subscriptions/' + $PSItem.Id}} | Select-Object -ExpandProperty Id`
+`
+ Get-AzSubscription | ForEach-Object {`
+`
+    Set-AzContext -Subscription $_.Id`
+    `
+    $scopes += Get-AzResourceGroup | Select-Object -ExpandProperty ResourceId`
+`
+}
+$scopes
+$budgets = @()
+foreach ($scope in $scopes) {`
+`
+Write-Host "Processing scope $scope" -ForegroundColor Green`
+`
+    $url = "https://management.azure.com$scope/providers/Microsoft.Consumption/budgets?api-version=$apiVersion"`
+    $result = Invoke-RestMethod -Method Get -Uri $url -Headers @{Authorization=("Bearer " + $AccessToken)}`
+`
+    # Add budgets to array`
+    foreach ($budget in $result.value) {`
+        $budgets += [PSCustomObject]@{`
+            Scope = $budget.scope`
+            Name = $budget.name`
+            Amount = $budget.properties.amount`
+            Category = $budget.properties.category`
+        }`
+    }`
+}
+$budgets
+`
+# Get all scopes`
+$scopes = @()`
+`
+$scopes += Get-AzManagementGroup | Select-Object -ExpandProperty Id`
+`
+$scopes += Get-AzSubscription -SubscriptionName "Demo" | Select-Object -Property @{n='Id';Expression={'/subscriptions/' + $PSItem.Id}} | Select-Object -ExpandProperty Id`
+`
+ Get-AzSubscription | ForEach-Object {`
+`
+    Set-AzContext -Subscription $_.Id | Out-Null`
+`
+    $scopes += Get-AzResourceGroup | Select-Object -ExpandProperty ResourceId`
+`
+}`
+`
+$budgets = @()
+`
+# Loop through scopes and retrieve budgets`
+foreach ($scope in $scopes) {`
+`
+Write-Host "Processing scope $scope" -ForegroundColor Green`
+`
+    $url = "https://management.azure.com$scope/providers/Microsoft.Consumption/budgets?api-version=$apiVersion"`
+`
+    try {`
+        $result = Invoke-RestMethod -Method Get -Uri $url -Headers @{Authorization=("Bearer " + $AccessToken)} -ErrorAction Stop`
+    }`
+    catch {`
+        Write-Host "Failed to retrieve budget for scope $scope" -ForegroundColor Yellow`
+        continue`
+    }`
+    `
+    # Add budgets to array`
+    foreach ($budget in $result.value) {`
+        $budgets += [PSCustomObject]@{`
+            Scope = $budget.scope`
+            Name = $budget.name`
+            Amount = $budget.properties.amount`
+            Category = $budget.properties.category`
+        }`
+    }`
+}`
+`
+$budgets
+$scopes
+`
+# Get all scopes`
+$scopes = @()`
+`
+$scopes += Get-AzManagementGroup | Select-Object -ExpandProperty Id`
+`
+$scopes += Get-AzSubscription -SubscriptionName "Demo" | Select-Object -Property @{n='Id';Expression={'/subscriptions/' + $PSItem.Id}} | Select-Object -ExpandProperty Id`
+`
+ Get-AzSubscription | ForEach-Object {`
+`
+    Set-AzContext -Subscription $_.Id | Out-Null`
+`
+    $scopes += Get-AzResourceGroup | Select-Object -ExpandProperty ResourceId`
+`
+}`
+`
+$budgets = @()`
+`
+# Loop through scopes and retrieve budgets`
+foreach ($scope in $scopes) {`
+`
+Write-Host "Processing scope $scope" -ForegroundColor Green`
+`
+    $url = "https://management.azure.com$scope/providers/Microsoft.Consumption/budgets?api-version=$apiVersion"`
+`
+    try {`
+        $result = Invoke-RestMethod -Method Get -Uri $url -Headers @{Authorization=("Bearer " + $AccessToken)} -ErrorAction Stop`
+    }`
+    catch {`
+        Write-Host "Failed to retrieve budget for scope $scope : $($PSItem.Exception.Message)" -ForegroundColor Yellow`
+        continue`
+    }`
+`
+    # Add budgets to array`
+    foreach ($budget in $result.value) {`
+        $budgets += [PSCustomObject]@{`
+            Scope = $budget.scope`
+            Name = $budget.name`
+            Amount = $budget.properties.amount`
+            Category = $budget.properties.category`
+        }`
+    }`
+}`
+
+$budgets
+`
+# Get all scopes`
+$scopes = @()`
+`
+$scopes += Get-AzManagementGroup | Select-Object -ExpandProperty Id`
+`
+$scopes += Get-AzSubscription -SubscriptionName "Demo" | Select-Object -Property @{n='Id';Expression={'/subscriptions/' + $PSItem.Id}} | Select-Object -ExpandProperty Id`
+`
+ Get-AzSubscription | ForEach-Object {`
+`
+    Set-AzContext -Subscription $_.Id | Out-Null`
+`
+    $scopes += Get-AzResourceGroup | Select-Object -ExpandProperty ResourceId`
+`
+}`
+`
+$budgets = @()`
+`
+# Loop through scopes and retrieve budgets`
+foreach ($scope in $scopes) {`
+`
+Write-Host "Processing scope $scope" -ForegroundColor Green`
+`
+    $url = "https://management.azure.com$scope/providers/Microsoft.Consumption/budgets?api-version=$apiVersion"`
+`
+    try {`
+        $result = Invoke-RestMethod -Method Get -Uri $url -Headers @{Authorization=("Bearer " + $AccessToken)} -ErrorAction Stop`
+    }`
+    catch {`
+        Write-Host "Failed to retrieve budget for scope $scope : $($PSItem.Exception.Message)" -ForegroundColor Yellow`
+        continue`
+    }`
+`
+    # Add budgets to array`
+    foreach ($budget in $result.value) {`
+        $budgets += [PSCustomObject]@{`
+            Scope = $budget.scope`
+            Name = $budget.name`
+            Amount = $budget.properties.amount`
+            Category = $budget.properties.category`
+        }`
+    }`
+}`
+
+$budgets
+# Get all scopes`
+$scopes = @()`
+`
+$scopes += Get-AzManagementGroup | Select-Object -ExpandProperty Id`
+`
+$scopes += Get-AzSubscription -SubscriptionName "Demo" | Select-Object -Property @{n='Id';Expression={'/subscriptions/' + $PSItem.Id}} | Select-Object -ExpandProperty Id`
+`
+ Get-AzSubscription | ForEach-Object {`
+`
+    Set-AzContext -Subscription $_.Id | Out-Null`
+`
+    $scopes += Get-AzResourceGroup | Select-Object -ExpandProperty ResourceId`
+`
+}`
+`
+$budgets = @()`
+`
+# Loop through scopes and retrieve budgets`
+foreach ($scope in $scopes) {`
+`
+Write-Host "Processing scope $scope" -ForegroundColor Green`
+`
+    $url = "https://management.azure.com$scope/providers/Microsoft.Consumption/budgets?api-version=$apiVersion"`
+`
+    try {`
+        $result = Invoke-RestMethod -Method Get -Uri $url -Headers @{Authorization=("Bearer " + $AccessToken)} -ErrorAction Stop`
+    }`
+    catch {`
+        Write-Host "Failed to retrieve budget for scope $scope : $($PSItem.Exception.Message)" -ForegroundColor Yellow`
+        continue`
+    }`
+`
+    # Add budgets to array`
+    foreach ($budget in $result.value) {`
+        $budgets += [PSCustomObject]@{`
+            Scope = $budget.scope`
+            Name = $budget.name`
+            Amount = $budget.properties.amount`
+            Category = $budget.properties.category`
+        }`
+    }`
+}
+$budgets
+$budget
+`
+# Get all scopes`
+$scopes = @()`
+`
+$scopes += Get-AzManagementGroup | Select-Object -ExpandProperty Id`
+`
+$scopes += Get-AzSubscription -SubscriptionName "Demo" | Select-Object -Property @{n='Id';Expression={'/subscriptions/' + $PSItem.Id}} | Select-Object -ExpandProperty Id`
+`
+ Get-AzSubscription | ForEach-Object {`
+`
+    Set-AzContext -Subscription $_.Id | Out-Null`
+`
+    $scopes += Get-AzResourceGroup | Select-Object -ExpandProperty ResourceId`
+`
+}`
+`
+$budgets = @()`
+`
+# Loop through scopes and retrieve budgets`
+foreach ($scope in $scopes) {`
+`
+Write-Host "Processing scope $scope" -ForegroundColor Green`
+`
+    $url = "https://management.azure.com$scope/providers/Microsoft.Consumption/budgets?api-version=$apiVersion"`
+`
+    try {`
+        $result = Invoke-RestMethod -Method Get -Uri $url -Headers @{Authorization=("Bearer " + $AccessToken)} -ErrorAction Stop`
+    }`
+    catch {`
+        Write-Host "Failed to retrieve budget for scope $scope : $($PSItem.Exception.Message)" -ForegroundColor Yellow`
+        continue`
+    }`
+`
+    # Add budgets to array`
+    foreach ($budget in $result.value) {`
+        $budgets += [PSCustomObject]@{`
+            Scope = $scope`
+            Name = $budget.name`
+            Amount = $budget.properties.amount`
+            CurrentSpend = $budget.properties.currentSpend`
+            Granularity = $budget.properties.timeGrain`
+            Category = $budget.properties.category`
+        }`
+    }`
+}`
+
+$budgets
+$budgets | ft -AutoSize
+($budget.properties.currentSpend.amount + " " + $budget.properties.currentSpend.unit)
+($budget.properties.currentSpend.amount.ToString() + " " + $budget.properties.currentSpend.unit)
+`
+# Get all scopes`
+$scopes = @()`
+`
+$scopes += Get-AzManagementGroup | Select-Object -ExpandProperty Id`
+`
+$scopes += Get-AzSubscription -SubscriptionName "Demo" | Select-Object -Property @{n='Id';Expression={'/subscriptions/' + $PSItem.Id}} | Select-Object -ExpandProperty Id`
+`
+ Get-AzSubscription | ForEach-Object {`
+`
+    Set-AzContext -Subscription $_.Id | Out-Null`
+`
+    $scopes += Get-AzResourceGroup | Select-Object -ExpandProperty ResourceId`
+`
+}`
+`
+$budgets = @()`
+`
+# Loop through scopes and retrieve budgets`
+foreach ($scope in $scopes) {`
+`
+Write-Host "Processing scope $scope" -ForegroundColor Green`
+`
+    $url = "https://management.azure.com$scope/providers/Microsoft.Consumption/budgets?api-version=$apiVersion"`
+`
+    try {`
+        $result = Invoke-RestMethod -Method Get -Uri $url -Headers @{Authorization=("Bearer " + $AccessToken)} -ErrorAction Stop`
+    }`
+    catch {`
+        Write-Host "Failed to retrieve budget for scope $scope : $($PSItem.Exception.Message)" -ForegroundColor Yellow`
+        continue`
+    }`
+`
+    # Add budgets to array`
+    foreach ($budget in $result.value) {`
+        $budgets += [PSCustomObject]@{`
+            Scope = $scope`
+            Name = $budget.name`
+            Amount = $budget.properties.amount`
+            CurrentSpend = ($budget.properties.currentSpend.amount.ToString() + " " + $budget.properties.currentSpend.unit)`
+            Granularity = $budget.properties.timeGrain`
+            Category = $budget.properties.category`
+        }`
+    }`
+}`
+
+$budgets | Format-Table -AutoSize
+`
+# Get all scopes`
+$scopes = @()`
+`
+$scopes += Get-AzManagementGroup | Select-Object -ExpandProperty Id`
+`
+$scopes += Get-AzSubscription -SubscriptionName "Demo" | Select-Object -Property @{n='Id';Expression={'/subscriptions/' + $PSItem.Id}} | Select-Object -ExpandProperty Id`
+`
+ Get-AzSubscription | ForEach-Object {`
+`
+    Set-AzContext -Subscription $_.Id | Out-Null`
+`
+    $scopes += Get-AzResourceGroup | Select-Object -ExpandProperty ResourceId`
+`
+}`
+`
+$budgets = @()`
+`
+# Loop through scopes and retrieve budgets`
+foreach ($scope in $scopes) {`
+`
+Write-Host "Processing scope $scope" -ForegroundColor Green`
+`
+    $url = "https://management.azure.com$scope/providers/Microsoft.Consumption/budgets?api-version=$apiVersion"`
+`
+    try {`
+        $result = Invoke-RestMethod -Method Get -Uri $url -Headers @{Authorization=("Bearer " + $AccessToken)} -ErrorAction Stop`
+    }`
+    catch {`
+        Write-Host "Failed to retrieve budget for scope $scope : $($PSItem.Exception.Message)" -ForegroundColor Yellow`
+        continue`
+    }`
+`
+    # Add budgets to array`
+    foreach ($budget in $result.value) {`
+        $budgets += [PSCustomObject]@{`
+            Scope = $scope`
+            Name = $budget.name`
+            Amount = $budget.properties.amount`
+            CurrentSpend = ($budget.properties.currentSpend.amount.ToString() + " " + $budget.properties.currentSpend.unit)`
+            Granularity = $budget.properties.timeGrain`
+            Category = $budget.properties.category`
+        }`
+    }`
+}`
+
+$budgets | Format-Table -AutoSize
+`
+# Get all scopes`
+$scopes = @()`
+`
+$scopes += Get-AzManagementGroup | Select-Object -ExpandProperty Id`
+`
+$scopes += Get-AzSubscription -SubscriptionName "Demo" | Select-Object -Property @{n='Id';Expression={'/subscriptions/' + $PSItem.Id}} | Select-Object -ExpandProperty Id`
+`
+ Get-AzSubscription | ForEach-Object {`
+`
+    Set-AzContext -Subscription $_.Id | Out-Null`
+`
+    $scopes += Get-AzResourceGroup | Select-Object -ExpandProperty ResourceId`
+`
+}`
+`
+$budgets = @()`
+`
+# Loop through scopes and retrieve budgets`
+foreach ($scope in $scopes) {`
+`
+Write-Host "Processing scope $scope" -ForegroundColor Green`
+`
+    $url = "https://management.azure.com$scope/providers/Microsoft.Consumption/budgets?api-version=$apiVersion"`
+`
+    try {`
+        $result = Invoke-RestMethod -Method Get -Uri $url -Headers @{Authorization=("Bearer " + $AccessToken)} -ErrorAction Stop`
+    }`
+    catch {`
+        Write-Host "Failed to retrieve budget for scope $scope : $($PSItem.Exception.Message)" -ForegroundColor Yellow`
+        continue`
+    }`
+`
+    # Add budgets to array`
+    foreach ($budget in $result.value) {`
+        $budgets += [PSCustomObject]@{`
+            Scope = $scope`
+            Name = $budget.name`
+            Amount = $budget.properties.amount`
+            CurrentSpend = ($budget.properties.currentSpend.amount.ToString() + " " + $budget.properties.currentSpend.unit)`
+            Granularity = $budget.properties.timeGrain`
+            Category = $budget.properties.category`
+        }`
+    }`
+}
+$budgets | Format-Table -AutoSize
+`
+# Get all scopes`
+$scopes = @()`
+`
+$scopes += Get-AzManagementGroup | Select-Object -ExpandProperty Id`
+`
+$scopes += Get-AzSubscription -SubscriptionName 'Demo' | Select-Object -Property @{n = 'Id'; Expression = { '/subscriptions/' + $PSItem.Id } } | Select-Object -ExpandProperty Id`
+`
+Get-AzSubscription | ForEach-Object {`
+`
+    Set-AzContext -Subscription $_.Id | Out-Null`
+`
+    $scopes += Get-AzResourceGroup | Select-Object -ExpandProperty ResourceId`
+`
+}`
+`
+$budgets = @()`
+`
+# Loop through scopes and retrieve budgets`
+foreach ($scope in $scopes) {`
+`
+    Write-Host "Processing scope $scope" -ForegroundColor Green`
+`
+    $url = "https://management.azure.com$scope/providers/Microsoft.Consumption/budgets?api-version=$apiVersion"`
+`
+    try {`
+        $result = Invoke-RestMethod -Method Get -Uri $url -Headers @{Authorization = ('Bearer ' + $AccessToken) } -ErrorAction Stop`
+    } catch {`
+        Write-Host "Failed to retrieve budget for scope $scope : $($PSItem.Exception.Message)" -ForegroundColor Yellow`
+        continue`
+    }`
+`
+    if ($result.value -eq $null) {`
+        Write-Host "No budgets found for scope $scope" -ForegroundColor Yellow`
+        continue`
+    } else {`
+        Write-Host "Found $($result.value.count) budgets for scope $scope" -ForegroundColor Green`
+        `
+        # Add budgets to array`
+        foreach ($budget in $result.value) {`
+            $budgets += [PSCustomObject]@{`
+                Scope        = $scope`
+                Name         = $budget.name`
+                Amount       = $budget.properties.amount`
+                CurrentSpend = ($budget.properties.currentSpend.amount.ToString() + ' ' + $budget.properties.currentSpend.unit)`
+                Granularity  = $budget.properties.timeGrain`
+                Category     = $budget.properties.category`
+            }`
+        }`
+    }`
+`
+}`
+
+`
+# Get all scopes`
+$scopes = @()`
+`
+$scopes += Get-AzManagementGroup | Select-Object -ExpandProperty Id`
+`
+$scopes += Get-AzSubscription -SubscriptionName 'Demo' | Select-Object -Property @{n = 'Id'; Expression = { '/subscriptions/' + $PSItem.Id } } | Select-Object -ExpandProperty Id`
+`
+Get-AzSubscription | ForEach-Object {`
+`
+    Set-AzContext -Subscription $_.Id | Out-Null`
+`
+    $scopes += Get-AzResourceGroup | Select-Object -ExpandProperty ResourceId`
+`
+}`
+`
+$budgets = @()`
+`
+# Loop through scopes and retrieve budgets`
+foreach ($scope in $scopes) {`
+`
+    Write-Host "Processing scope $scope" -ForegroundColor Green`
+`
+    $url = "https://management.azure.com$scope/providers/Microsoft.Consumption/budgets?api-version=$apiVersion"`
+`
+    try {`
+        $result = Invoke-RestMethod -Method Get -Uri $url -Headers @{Authorization = ('Bearer ' + $AccessToken) } -ErrorAction Stop`
+    } catch {`
+        Write-Host "Failed to retrieve budget for scope $scope : $($PSItem.Exception.Message)" -ForegroundColor Yellow`
+        continue`
+    }`
+`
+    if ($result.value -eq $null) {`
+        Write-Host "No budgets found for scope $scope" -ForegroundColor Yellow`
+        continue`
+    } else {`
+        Write-Host "Found $($result.value.count) budgets for scope $scope" -ForegroundColor Green`
+        `
+        # Add budgets to array`
+        foreach ($budget in $result.value) {`
+            $budgets += [PSCustomObject]@{`
+                Scope        = $scope`
+                Name         = $budget.name`
+                Amount       = $budget.properties.amount`
+                CurrentSpend = ($budget.properties.currentSpend.amount.ToString() + ' ' + $budget.properties.currentSpend.unit)`
+                Granularity  = $budget.properties.timeGrain`
+                Category     = $budget.properties.category`
+            }`
+        }`
+    }`
+`
+}`
+
+`
+# Get all scopes`
+$scopes = @()`
+`
+$scopes += Get-AzManagementGroup | Select-Object -ExpandProperty Id`
+`
+$scopes += Get-AzSubscription -SubscriptionName 'Demo' | Select-Object -Property @{n = 'Id'; Expression = { '/subscriptions/' + $PSItem.Id } } | Select-Object -ExpandProperty Id`
+`
+Get-AzSubscription | ForEach-Object {`
+`
+    Set-AzContext -Subscription $_.Id | Out-Null`
+`
+    $scopes += Get-AzResourceGroup | Select-Object -ExpandProperty ResourceId`
+`
+}`
+`
+$budgets = @()`
+`
+# Loop through scopes and retrieve budgets`
+foreach ($scope in $scopes) {`
+`
+    Write-Host "Processing scope $scope" -ForegroundColor Green`
+`
+    $url = "https://management.azure.com$scope/providers/Microsoft.Consumption/budgets?api-version=$apiVersion"`
+`
+    try {`
+        $result = Invoke-RestMethod -Method Get -Uri $url -Headers @{Authorization = ('Bearer ' + $AccessToken) } -ErrorAction Stop`
+    } catch {`
+        Write-Host "Failed to retrieve budget for scope $scope : $($PSItem.Exception.Message)" -ForegroundColor Yellow`
+        continue`
+    }`
+`
+    if ($null -eq $result.value) {`
+        Write-Host "No budgets found for scope $scope" -ForegroundColor Yellow`
+        continue`
+    } else {`
+        Write-Host "Found $($result.value.count) budgets for scope $scope" -ForegroundColor Green`
+`
+        # Add budgets to array`
+        foreach ($budget in $result.value) {`
+            $budgets += [PSCustomObject]@{`
+                Scope        = $scope`
+                Name         = $budget.name`
+                Amount       = $budget.properties.amount`
+                CurrentSpend = ($budget.properties.currentSpend.amount.ToString() + ' ' + $budget.properties.currentSpend.unit)`
+                Granularity  = $budget.properties.timeGrain`
+                Category     = $budget.properties.category`
+            }`
+        }`
+    }`
+`
+}`
+
+$budgets | Format-Table -AutoSize
+`
+# Get all scopes`
+$scopes = @()`
+`
+$scopes += Get-AzManagementGroup | Select-Object -ExpandProperty Id`
+`
+$scopes += Get-AzSubscription | Select-Object -Property @{n = 'Id'; Expression = { '/subscriptions/' + $PSItem.Id } } | Select-Object -ExpandProperty Id`
+`
+Get-AzSubscription | ForEach-Object {`
+`
+    Set-AzContext -Subscription $_.Id | Out-Null`
+`
+    $scopes += Get-AzResourceGroup | Select-Object -ExpandProperty ResourceId`
+`
+}`
+`
+$budgets = @()`
+`
+# Loop through scopes and retrieve budgets`
+foreach ($scope in $scopes) {`
+`
+    Write-Host "Processing scope $scope" -ForegroundColor Green`
+`
+    $url = "https://management.azure.com$scope/providers/Microsoft.Consumption/budgets?api-version=$apiVersion"`
+`
+    try {`
+        $result = Invoke-RestMethod -Method Get -Uri $url -Headers @{Authorization = ('Bearer ' + $AccessToken) } -ErrorAction Stop`
+    } catch {`
+        Write-Host "Failed to retrieve budget for scope $scope : $($PSItem.Exception.Message)" -ForegroundColor Yellow`
+        continue`
+    }`
+`
+    if ($null -eq $result.value) {`
+        Write-Host "No budgets found for scope $scope" -ForegroundColor Yellow`
+        continue`
+    } else {`
+        Write-Host "Found $($result.value.count) budgets for scope $scope" -ForegroundColor Green`
+`
+        # Add budgets to array`
+        foreach ($budget in $result.value) {`
+            $budgets += [PSCustomObject]@{`
+                Scope        = $scope`
+                Name         = $budget.name`
+                Amount       = $budget.properties.amount`
+                CurrentSpend = ($budget.properties.currentSpend.amount.ToString() + ' ' + $budget.properties.currentSpend.unit)`
+                Granularity  = $budget.properties.timeGrain`
+                Category     = $budget.properties.category`
+            }`
+        }`
+    }`
+`
+}`
+
+$budgets | Format-Table -AutoSize
+`
+$budgets = @()`
+`
+# Loop through scopes and retrieve budgets`
+foreach ($scope in $scopes) {`
+`
+    Write-Host "Processing scope $scope" -ForegroundColor Green`
+`
+    $url = "https://management.azure.com$scope/providers/Microsoft.Consumption/budgets?api-version=$apiVersion"`
+`
+    try {`
+        $result = Invoke-RestMethod -Method Get -Uri $url -Headers @{Authorization = ('Bearer ' + $AccessToken) } -ErrorAction Stop`
+    } catch {`
+        Write-Host "Failed to retrieve budget for scope $scope : $($PSItem.Exception.Message)" -ForegroundColor Yellow`
+        continue`
+    }`
+`
+    if ($null -eq $result.value) {`
+        Write-Host "No budgets found for scope $scope" -ForegroundColor Yellow`
+        continue`
+    } else {`
+        Write-Host "Found $($result.value.count) budgets for scope $scope" -ForegroundColor Green`
+`
+        # Add budgets to array`
+        foreach ($budget in $result.value) {`
+            $budgets += [PSCustomObject]@{`
+                Scope        = $scope`
+                Name         = $budget.name`
+                Amount       = $budget.properties.amount`
+                CurrentSpend = ($budget.properties.currentSpend.amount.ToString() + ' ' + $budget.properties.currentSpend.unit)`
+                Granularity  = $budget.properties.timeGrain`
+                Category     = $budget.properties.category`
+            }`
+        }`
+    }`
+`
+}`
+
+$budgets | Format-Table -AutoSize
+$budgets 
+$scopes
+$AccessToken 
+$resource
+$resource = 'https://management.core.windows.net/'`
+$apiVersion = '2023-03-01'
+$resource
+$AccessToken
+`
+# Get all scopes`
+$scopes = @()`
+`
+$scopes += Get-AzManagementGroup | Select-Object -ExpandProperty Id`
+`
+$scopes += Get-AzSubscription | Select-Object -Property @{n = 'Id'; Expression = { '/subscriptions/' + $PSItem.Id } } | Select-Object -ExpandProperty Id`
+`
+<# Disabled since resource groups are also returned when querying for subscriptions`
+`
+Get-AzSubscription | ForEach-Object {`
+`
+    Set-AzContext -Subscription $_.Id | Out-Null`
+`
+    $scopes += Get-AzResourceGroup | Select-Object -ExpandProperty ResourceId`
+`
+}`
+`
+#>`
+`
+$budgets = @()`
+`
+# Loop through scopes and retrieve budgets`
+foreach ($scope in $scopes) {`
+`
+    Write-Host "Processing scope $scope" -ForegroundColor Green`
+`
+    $url = "https://management.azure.com$scope/providers/Microsoft.Consumption/budgets?api-version=$apiVersion"`
+`
+    try {`
+        $result = Invoke-RestMethod -Method Get -Uri $url -Headers @{Authorization = ('Bearer ' + $AccessToken) } -ErrorAction Stop`
+    } catch {`
+        Write-Host "Failed to retrieve budget for scope $scope : $($PSItem.Exception.Message)" -ForegroundColor Yellow`
+        continue`
+    }`
+`
+    if ($null -eq $result.value) {`
+        Write-Host "No budgets found for scope $scope" -ForegroundColor Yellow`
+        continue`
+    } else {`
+        Write-Host "Found $($result.value.count) budgets for scope $scope" -ForegroundColor Green`
+`
+        # Add budgets to array`
+        foreach ($budget in $result.value) {`
+            $budgets += [PSCustomObject]@{`
+                Scope        = $scope`
+                Name         = $budget.name`
+                Amount       = $budget.properties.amount`
+                CurrentSpend = ($budget.properties.currentSpend.amount.ToString() + ' ' + $budget.properties.currentSpend.unit)`
+                Granularity  = $budget.properties.timeGrain`
+                Category     = $budget.properties.category`
+            }`
+        }`
+    }`
+`
+}
+$budgets | Format-Table -AutoSize
+$budgets | Export-Csv -Path 'budgets.csv' -NoTypeInformation
+pwd
+az bicep upgrade
+ls
+cd /workspaces/azure_arc/azure_jumpstart_hcibox/bicep
+ls
+cp ./main.parameters.json /workspaces/msftdemo/azure/arc/hcibox
+az group create --name "hcibox-demo-rg"  --location "eastus"
+cd /workspaces/azure_arc/azure_jumpstart_hcibox/bicep
+az deployment group create -g "hcibox-demo-rg" -f "main.bicep" -p "/workspaces/msftdemo/azure/arc/hcibox/main.parameters.json"
+cd /workspaces/azure_arc/azure_jumpstart_hcibox/bicep
+git remote -v
+git branch
+git checkout main
+git pull
+git pull --no-ff
+git pull origin main --rebase
+git status
+pwd
+cd ..
+Rename-Item ./azure_arc/ -NewName azure_arc_old
+git clone git@github.com:janegilring/azure_arc.git
+ls
+pwd
+rmdir /workspaces/azure_arc_old
+rm -rf /workspaces/azure_arc_old
+ls
+du
+df
+df -H
+git clone git@github.com:janegilring/azure_arc.git
+cd /workspaces/azure_arc/azure_jumpstart_hcibox/bicep
+az deployment group create -g "hcibox-demo-rg" -f "main.bicep" -p "/workspaces/msftdemo/azure/arc/hcibox/main.parameters.json"
+cd /workspaces/msftdemo/azure/arc/hcibox/resource_bridge
+az deployment group create -g "hcibox-demo-rg" -f "main.bicep"
+az extension update --name connectedk8s
+$RGname = "agora-demo-rg"
+az group create --name $RGname --location "northeurope"
+git pull
+git status
+cd /workspaces/azure_arc/azure_jumpstart_ag/bicep/
+ls /workspaces/azure_arc
+cd /workspaces/azure_arc
+git pull
+git remote -v
+git pull
+git branch
+git pull origin jumpstart_ag
+git branch -M jumpstart_ag
+git status
+git branch
+git pull
+git branch
+git branch -M main
+git branch --help
+git branch
+git checkout jumpstart_ag
+git checkout main
+cd /workspaces
+rm -rf /workspaces/azure_arc
+git clone git@github.com:janegilring/azure_arc.git
+cd /workspaces/azure_arc/
+git branch
+git checkout jumpstart_ag
+git pull
+cd /workspaces/azure_arc/azure_jumpstart_ag/bicep/
+az deployment group create -g $RGname -f "main.bicep" -p /workspaces/msftdemo/azure/arc/agora/main_msftdemo_subscription.parameters.json
+cd ..
+ls
+pwd
+git clone git@ssh.dev.azure.com:v3/janegilringmsft/azure-automation/azure-automation /workspaces/azure-automation
+gmo
+gmo -list -name az
+    Install-Module -Name Pester -Scope CurrentUser -Force -Confirm:$false -RequiredVersion 4.8.1
+    Install-Module -Name PSScriptAnalyzer -Scope CurrentUser -Force -Confirm:$false -RequiredVersion 1.18.3
+Import-Module Pester`
+Import-Module PSScriptAnalyzer`
+
+Update-Module -Name PSScriptAnalyzer
+Import-Module PSScriptAnalyzer
+gmo
+Import-Module Pester
+cd /workspaces/azure-automation/Runbooks
+$PSSATestsPath = "/tmp/results.xml"
+$PSSATests = Invoke-Pester -Script @{`
+    Path       = Join-Path -Path $TestsPath -ChildPath 'PSSA.tests.ps1'`
+    Parameters = @{ScriptRoot = $RunbookPath}`
+} -OutputFormat 'NUnitXml' -OutputFile $PSSATestsPath -PassThru
+$TestsPath = "/workspaces/azure-automation/Tests"
+$PSSATests = Invoke-Pester -Script @{`
+    Path       = Join-Path -Path $TestsPath -ChildPath 'PSSA.tests.ps1'`
+    Parameters = @{ScriptRoot = $RunbookPath}`
+} -OutputFormat 'NUnitXml' -OutputFile $PSSATestsPath -PassThru
+cd /workspaces
+git clone git@ssh.dev.azure.com:v3/janegilringmsft/azure-pipelines-demos/azure-pipelines-demos
+$RunbookPath = "/workspaces/azure-automation/Runbooks"
+Import-Module Pester`
+Import-Module PSScriptAnalyzer
+$TestsPath = "`
+/workspaces/azure-automation/Tests"
+$TestsPath
+$TestsPath = "/workspaces/azure-automation/Tests"
+Set-Location $RunbookPath
+$PSSATestsPath = "/tmp/results.xml"
+$PSSATestsPath = Join-Path $ENV:SYSTEM_DEFAULTWORKINGDIRECTORY 'PSSAResults.xml'`
+$PSSATests = Invoke-Pester -Script @{`
+    Path       = Join-Path -Path $TestsPath -ChildPath 'PSSA.tests.ps1'`
+    Parameters = @{ScriptRoot = $RunbookPath}`
+} -OutputFormat 'NUnitXml' -OutputFile $PSSATestsPath -PassThru`
+
+df -H
+cd /workspaces
+ls
+rm -rf /workspaces/azure_arc_jumpstart-apps_old
+df -H
+cd /workspaces/azure_arc/azure_jumpstart_ag/bicep/
+git remote -v
+git pull
+$RGname = "agora-demo-rg"`
+az group create --name $RGname --location "northeurope"
+az deployment group create -g $RGname -f "main.bicep" -p /workspaces/msftdemo/azure/arc/agora/main_msftdemo_subscription.parameters.json
+$RGname = "agora-demo-rg"
+cd /workspaces/azure_arc/azure_jumpstart_ag/bicep/
+az deployment group create -g $RGname -f "main.bicep" -p /workspaces/msftdemo/azure/arc/agora/main_msftdemo_subscription.parameters.json
+$RGname = "agora-demo-rg"
+cd /workspaces/azure_arc/azure_jumpstart_ag/bicep/
+git pull
+az deployment group create -g $RGname -f "main.bicep" -p /workspaces/msftdemo/azure/arc/agora/main_msftdemo_subscription.parameters.json
+pwd
+cd /workspaces/azure_arc/azure_jumpstart_ag/bicep/
+git pull
+$RGname = "agora-demo-rg"
+az deployment group create -g $RGname -f "main.bicep" -p /workspaces/msftdemo/azure/arc/agora/main_msftdemo_subscription.parameters.json
+$RGname = "agora-demo2-rg"
+az group create --name $RGname --location "northeurope"
+cd /workspaces/azure_arc/azure_jumpstart_ag/bicep/
+az deployment group create -g $RGname -f "main.bicep" -p /workspaces/msftdemo/azure/arc/agora/main_msftdemo_subscription.parameters.json
+git pull
+$RGname = "agora-demo3-rg"
+az group create --name $RGname --location "northeurope"
+az deployment group create -g $RGname -f "main.bicep" -p /workspaces/msftdemo/azure/arc/agora/main_msftdemo_subscription.parameters.json
+$RGname = "agora-demo2-rg"
+az group create --name $RGname --location "northeurope"
+cd /workspaces/azure_arc/azure_jumpstart_ag/bicep/
+az deployment group create -g $RGname -f "main.bicep" -p /workspaces/msftdemo/azure/arc/agora/main_msftdemo_subscription.parameters.json
+$RGname = "agora-demo3-rg"
+az group create --name $RGname --location "northeurope"
+cd /workspaces/azure_arc/azure_jumpstart_ag/bicep/
+az deployment group create -g $RGname -f "main.bicep" -p /workspaces/msftdemo/azure/arc/agora/main_msftdemo_subscription.parameters.json
+pwd
+Get-AzContext | fl
